@@ -1,0 +1,31 @@
+#{extends 'main.html' /}
+#{set title:'Trainer' /}
+
+#{menu id:"trainer"/}
+
+<section class="ui raised segment">
+  <header class="ui header">
+    Trainer List
+  </header>
+  <div class="ui bulleted list">
+  #{list items:trainerlist, as:'trainer'}
+    <div class="ui item"> ${trainer.name} </div>
+    <div class="ui item"> ${trainer.email} </div>
+    <div class="ui item"> ${trainer.address} </div>
+    <div class="ui item"> ${trainer.gender} </div>
+  #{/list}
+  </div>
+</section>
+
+
+<form class="ui stacked segment form" action="/trainer/addPerson" method="POST">
+  <div class="field">
+    <label>Name</label>
+    <input placeholder="Title" type="text" name="name"> </br>
+    <input placeholder="Title" type="text" name="email">
+    <input placeholder="Title" type="text" name="address">
+    <input placeholder="Title" type="text" name="gender">
+  </div>
+  <button class="ui blue submit button">Add Trainer</button>
+</form>
+

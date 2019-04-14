@@ -1,0 +1,13 @@
+Person(1):
+  name: "Arshad"
+  email: "Arshad@DBHealth.ie"
+  address: "Apt 5, Orchard"
+  gender: "Male"
+  memberShip: "Trainer"
+
+User(1):
+  name: "Kasia"
+  email: "kasia@DBHealth.ie"
+  address: "Apt 5, Orchard"
+  gender: "Female"
+  memberShip: "Member"
