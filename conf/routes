@@ -4,12 +4,14 @@
 
 # Home page
 GET     /                                       Start.index
+GET     /dashboard                              Dashboard.index
 GET     /member                                 Member.index
 POST    /member/addmember                       Member.addUser
 GET     /about                                  About.index
 GET     /trainer                                Trainer.index
 POST    /trainer/addtrainer                     Trainer.addPerson
-
+GET		/login									Login.index
+GET     /register								Register.index
 # Ignore favicon requests
 GET     /favicon.ico                            404
 

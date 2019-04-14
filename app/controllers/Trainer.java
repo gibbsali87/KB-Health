@@ -14,14 +14,15 @@ public class Trainer extends Controller
     render("trainer.html", trainerlist);
   }
 
-  public static void addPerson(String name, String email, String address, String gender, String memberShip)
+  public static void addPerson(String name, String email, String address, String gender, String memberShip, String password)
   {
-    Person trainer = new Person(); //(name, email, address, gender);
+    Person trainer = new Person();
     trainer.setName(name);
     trainer.setEmail(email);
     trainer.setAddress(address);
     trainer.setGender(gender);
     trainer.setMemberShip("Trainer");
+    trainer.setPassword(password);
     trainer.save();
     Logger.info("Adding Trainer " + name + " " + email + " " + address + " " + gender);
     redirect("/trainer");

@@ -4,6 +4,7 @@ Person(1):
   address: "Apt 5, Orchard"
   gender: "Male"
   memberShip: "Trainer"
+  password: "KBHealth1"
 
 User(1):
   name: "Kasia"
@@ -11,3 +12,4 @@ User(1):
   address: "Apt 5, Orchard"
   gender: "Female"
   memberShip: "Member"
+  password: "KBHealth1"

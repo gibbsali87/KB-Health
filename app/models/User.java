@@ -10,15 +10,8 @@ public class User extends Model {
     private String address;
     private String gender;
     private String memberShip;
+    private String password;
 
-    /*
-    public Person(String name, String email, String address, String gender) {
-        this.name = name;
-        this.email = email;
-        this.address = address;
-        this.gender = gender;
-    }
-    */
 
     public void setName(String name) {
         this.name = name;
@@ -39,6 +32,9 @@ public class User extends Model {
     public void setMemberShip(String memberShip) {
         this.memberShip = memberShip;
     }
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
     public String getName() {
         return name;
@@ -58,5 +54,8 @@ public class User extends Model {
 
     public String getMemberShip() {
         return memberShip;
+    }
+    public String getPassword(){
+        return password;
     }
 }

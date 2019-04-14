@@ -5,28 +5,17 @@
 
 <section class="ui raised segment">
     <header class="ui header">
-        Member List
+        Member Details
     </header>
     <div class="ui bulleted list">
     #{list items:memberlist, as:'member'}
-        <div class="ui item"> ${member.name} </div>
-        <div class="ui item"> ${member.email} </div>
-        <div class="ui item"> ${member.address} </div>
-        <div class="ui item"> ${member.gender} </div>
+        <div class="ui item"> Member: ${member.id} </div>
+        <div class="ui item"> Full Name: ${member.name} </div>
+        <div class="ui item"> Email: ${member.email} </div>
+        <div class="ui item"> Address: ${member.address} </div>
+        <div class="ui item"> Gender: ${member.gender} </div>
+        </br>
        
     #{/list}
     </div>
 </section>
-
-
-<form class="ui stacked segment form" action="/member/addUser" method="POST">
-    <div class="field">
-        <label>Name</label>
-        <input placeholder="Title" type="text" name="name"> </br>
-        <input placeholder="Title" type="text" name="email">
-        <input placeholder="Title" type="text" name="address">
-        <input placeholder="Title" type="text" name="gender">
-     
-    </div>
-    <button class="ui blue submit button">Add Member</button>
-</form>

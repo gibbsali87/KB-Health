@@ -1,24 +1,16 @@
 #{extends 'main.html' /}
-#{set title:'Member' /}
+#{set title:'Dashboard' /}
 
 #{menu id:"dashboard"/}
 
-<section class="ui raised segment">
-  <header class="ui header">
-    Member List
-  </header>
-  <div class="ui bulleted list">
-  #{list items:memberlist, as:'member'}
-    <div class="ui item"> ${member.name} </div>
-  #{/list}
-  </div>
+<section class="ui center aligned middle aligned segment">
+  <h1 class="ui header">
+    KB Health
+  </h1>
+  <h3>
+    Simple Fitness & Weight Loss
+  </h3>
+  <p>
+    Dashboard
+  </p>
 </section>
-
-
-<form class="ui stacked segment form" action="/dashboard/addtodo" method="POST">
-  <div class="field">
-    <label>Members</label>
-    <input placeholder="Title" type="text" name="title">
-  </div>
-  <button class="ui blue submit button">Add Member</button>
-</form>
