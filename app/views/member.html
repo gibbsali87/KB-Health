@@ -5,7 +5,8 @@
 
 <section class="ui raised segment">
     <header class="ui header">
-        Member Details
+        Member Details 
+
     </header>
     <div class="ui bulleted list">
     #{list items:memberlist, as:'member'}
@@ -15,7 +16,12 @@
         <div class="ui item"> Address: ${member.address} </div>
         <div class="ui item"> Gender: ${member.gender} </div>
         </br>
-       
+
+
+
     #{/list}
+    </div>
+    <div style="font-size: 30px;">
+     <i class="far fa-id-badge"></i>
     </div>
 </section>

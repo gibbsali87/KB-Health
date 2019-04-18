@@ -10,12 +10,16 @@
   	Simple Fitness & Weight Loss
   </h3>
   <p>
-  	<a href="/register">
+  	<a id="register" class="item" href="/register">
     <button type="button" class="btn btn-primary">I'm a New User</button>
     </a> </br> </br>
 
-    <a href="/login">
+    <a id="login" class="item" href="/login">
     <button type="button" class="btn btn-secondary">Returning User</button>
     </a>
   </p>
 </section>
+
+<script>
+  $("#${_id}").addClass("active item");
+</script>

@@ -41,7 +41,7 @@ public class User extends Model {
     }
 
     public String getEmail() {
-        return email;
+       return email;
     }
 
     public String getAddress() {
@@ -56,6 +56,9 @@ public class User extends Model {
         return memberShip;
     }
     public String getPassword(){
-        return password;
+       return password;
     }
+
+
+
 }

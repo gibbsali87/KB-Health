@@ -14,6 +14,7 @@ public class Member extends Controller{
         List<User> memberlist = User.findAll();
         render("member.html", memberlist);
     }
+
     public static void addUser(String name, String email, String address, String gender, String memberShip, String password)
     {
         User member = new User();
