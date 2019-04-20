@@ -28,5 +28,4 @@ public class Member extends Controller{
         Logger.info("Adding Member" + name + " " + email + " " + address + " " + gender);
         redirect("/member");
     }
-
 }

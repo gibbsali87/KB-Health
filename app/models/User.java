@@ -1,6 +1,10 @@
 package models;
 import play.db.jpa.Model;
 import javax.persistence.Entity;
+import javax.persistence.CascadeType;
+import javax.persistence.OneToMany;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @Entity
@@ -12,6 +16,8 @@ public class User extends Model {
     private String memberShip;
     private String password;
 
+    @OneToMany(cascade = CascadeType.ALL)
+    public List<Exerciselist> exerciseDetails = new ArrayList<Exerciselist>();
 
     public void setName(String name) {
         this.name = name;
@@ -58,6 +64,16 @@ public class User extends Model {
     public String getPassword(){
        return password;
     }
+
+    public static User findByEmail(String email)
+    {
+        return find("email", email).first();
+    }
+    public boolean checkPassword(String password)
+    {
+        return this.password.equals(password);
+    }
+    
 
 
 

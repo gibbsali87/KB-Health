@@ -2,7 +2,7 @@ package controllers;
 
 import java.util.List;
 
-import models.ExerciseList;
+import models.Exerciselist;
 import models.Exercise;
 import play.Logger;
 import play.mvc.Controller;
@@ -11,28 +11,28 @@ public class MemberDetails extends Controller
 {
   public static void index(Long id)
   {
-    ExerciseList exerciseList = ExerciseList.findById(id);
-    Logger.info ("ExerciseList id = " + id);
-    render("ExerciseList.html", exerciseList);
+    Exerciselist exerciselist = Exerciselist.findById(id);
+    Logger.info ("Exerciselist id = " + id);
+    render("memberDetails.html", exerciselist);
   }
 
-  public static void deleteExercise (Long id, Long exerciseid)
+  public static void deleteexercise (Long id, Long exerciseid)
   {
-    ExerciseList exerciseList = ExerciseList.findById(id);
+    Exerciselist exerciselist = Exerciselist.findById(id);
     Exercise exercise = Exercise.findById(exerciseid);
     Logger.info ("Removing" + exercise.type);
-    exerciseList.exerciseDetails.remove(exercise);
-    exerciseList.save();
+    exerciselist.exerciseDetails.remove(exercise);
+    exerciselist.save();
     exercise.delete();
-    render("exerciseList.html", exerciseList);
+    render("memberDetails.html", exerciselist);
   }
 
   public static void addExercise(Long id, String type, String location, int duration)
   {
     Exercise exercise = new Exercise(type, location, duration);
-    ExerciseList exerciseList = ExerciseList.findById(id);
-    exerciseList.exerciseDetails.add(exercise);
-    exerciseList.save();
-    redirect ("/exerciseList/" + id);
+    Exerciselist exerciselist = Exerciselist.findById(id);
+    exerciselist.exerciseDetails.add(exercise);
+    exerciselist.save();
+    redirect ("/exerciselists/" + id);
   }
 }

@@ -5,7 +5,8 @@
 
 <section class="ui segment">
  <h2 class="ui header">
- 	${memberDetails.name}
+ 	${exerciselist.type}
  </h2>
- #{details}
+  #{exerciseDetails exerciselist:exerciselist /}
+  #{addexercise exerciselist:exerciselist /}
 </section> 

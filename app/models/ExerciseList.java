@@ -10,14 +10,14 @@ import javax.persistence.OneToMany;
 import play.db.jpa.Model;
 
 @Entity
-public class ExerciseList extends Model
+public class Exerciselist extends Model
 {
   public String type;
   @OneToMany(cascade = CascadeType.ALL)
   public List<Exercise> exerciseDetails = new ArrayList<Exercise>();
   public int duration;
 
-  public ExerciseList(String type, int duration)
+  public Exerciselist(String type, int duration)
   {
     this.type = type;
     this.duration = duration;

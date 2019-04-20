@@ -5,15 +5,23 @@
 # Home page
 GET     /                                       Start.index
 GET     /dashboard                              Dashboard.index
+GET     /dashboard/deleteexerciselist/{id}      Dashboard.deleteexerciselist
+POST    /dashboard/addexerciselist              Dashboard.addExerciselist
+
 GET     /member                                 Member.index
 POST    /member/addmember                       Member.addUser
 GET     /about                                  About.index
 GET     /trainer                                Trainer.index
 POST    /trainer/addtrainer                     Trainer.addPerson
-GET		/login									Login.index
+GET     /login                                  Login.login
+POST    /authenticate                            Login.authenticate
 GET     /register								Register.index
-GET     /memberDetails/{id}                     MemberDetails.index
 
+GET     /memberDetails                    		MemberDetails.index
+GET     /member/{id}                     		MemberDetails.index
+GET     /exerciselists/{id}/deleteexercise/{songexercise}     MemberDetails.deleteExercise
+
+POST    /exerciseDetails/{id}/addexercise      MemberDetails.addExercise
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

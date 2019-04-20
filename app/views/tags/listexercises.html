@@ -1,0 +1,28 @@
+<table class="ui fixed table">
+  <thead>
+    <tr>
+      <th>Exercise</th>
+      <th>Location</th>
+      <th>Duration</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    #{list items:_exerciselist.exercise, as:'exercise'}
+      <tr>
+        <td>
+          ${exercise.type}
+        </td>
+        <td>
+          ${exercise.location}
+        </td>
+        <td>        
+          ${exercise.duration}
+        </td>      
+         <td>
+            <a href="/listexercises/${_exerciselist.id}/deleteexercise/${exercise.id}" class="ui tiny red button">Delete Exercise</a>
+          </td>         
+      </tr>
+    #{/list}
+  </tbody>
+</table>
