@@ -12,6 +12,9 @@ GET     /trainer                                Trainer.index
 POST    /trainer/addtrainer                     Trainer.addPerson
 GET		/login									Login.index
 GET     /register								Register.index
+GET     /memberDetails/{id}                     MemberDetails.index
+
+
 # Ignore favicon requests
 GET     /favicon.ico                            404
 

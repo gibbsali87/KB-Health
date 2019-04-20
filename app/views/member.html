@@ -10,6 +10,15 @@
     </header>
     <div class="ui bulleted list">
     #{list items:memberlist, as:'member'}
+    <section class="ui segment">
+        <h2 class="ui header">
+            ${member.name}
+        </h2>
+        <p>
+            ${member.gender}
+        </p>
+        <a href="/member/${member.id}">View</a>
+    </section>
         <div class="ui item"> Member: ${member.id} </div>
         <div class="ui item"> Full Name: ${member.name} </div>
         <div class="ui item"> Email: ${member.email} </div>
