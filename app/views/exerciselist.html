@@ -1,12 +1,12 @@
 #{extends 'main.html' /}
-#{set title:'MemberDetails' /}
+#{set name:'Exerciselist' /}
 
 #{menu id:"dashboard"/}
 
 <section class="ui segment">
  <h2 class="ui header">
- 	${exerciselist.type}
+ 	${exerciselist.name}
  </h2>
-  #{exerciseDetails exerciselist:exerciselist /}
+  #{listexercises exerciselist:exerciselist /}
   #{addexercise exerciselist:exerciselist /}
 </section> 

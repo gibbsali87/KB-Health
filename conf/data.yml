@@ -1,15 +1,66 @@
-Person(1):
-  name: "Arshad"
-  email: "Arshad@DBHealth.ie"
-  address: "Apt 5, Orchard"
-  gender: "Male"
-  memberShip: "Trainer"
-  password: "KBHealth1"
+Exercise(s1):
+  name: Running
+  location: Park    
+  duration: 30
+Exercise(s2):
+  name: Running
+  location: Park
+  duration: 120
+Exercise(s3):
+  name: Hiking
+  location: Donegal
+  duration: 300
+Exercise(s4):
+  name: Kick Boxing
+  location: Kick Boxing Club
+  duration: 60
+Exercise(s5):
+  name: Kick Boxing
+  location: Gym
+  duration: 60
+Exercise(s6):
+  name: Kick Boxing
+  location: Kick Boxing Club
+  duration: 120    
+Exercise(s7):
+  name: Hiking
+  location: Park
+  duration: 60
 
-User(1):
-  name: "Kasia"
-  email: "kasia@DBHealth.ie"
-  address: "Apt 5, Orchard"
-  gender: "Female"
-  memberShip: "Member"
-  password: "KBHealth1"
+  
+Exerciselist(el1):
+  name: Running
+  duration: 150
+  exercises:
+  - s1
+  - s2
+  
+Exerciselist(el2):
+  name: Hiking
+  duration: 60
+  exercises:
+  - s3
+  - s7  
+  
+Exerciselist(el3):
+  name: Kick Boxing
+  duration: 240
+  exercises:
+  - s4
+  - s5
+  - s6
+
+User(u1):
+  firstname: Arshad
+  lastname: Ali
+  email: Arshad@KBHealth.ie
+  password: 123
+  exerciselists:
+  - el1
+  - el2
+
+User(u2):
+  firstname: Kate
+  lastname: Kida
+  email: kate@KBHealth.ie
+  password: 123

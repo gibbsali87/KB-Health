@@ -7,31 +7,31 @@ import models.Exercise;
 import play.Logger;
 import play.mvc.Controller;
 
-public class MemberDetails extends Controller
+public class ExerciseDetails extends Controller
 {
   public static void index(Long id)
   {
     Exerciselist exerciselist = Exerciselist.findById(id);
     Logger.info ("Exerciselist id = " + id);
-    render("memberDetails.html", exerciselist);
+    render("exerciselist.html", exerciselist);
   }
 
-  public static void deleteexercise (Long id, Long exerciseid)
+  public static void deleteExercise (Long id, Long exerciseid)
   {
     Exerciselist exerciselist = Exerciselist.findById(id);
     Exercise exercise = Exercise.findById(exerciseid);
-    Logger.info ("Removing" + exercise.type);
-    exerciselist.exerciseDetails.remove(exercise);
+    Logger.info ("Removing" + exercise.name);
+    exerciselist.exercises.remove(exercise);
     exerciselist.save();
     exercise.delete();
-    render("memberDetails.html", exerciselist);
+    render("exerciselist.html", exerciselist);
   }
 
-  public static void addExercise(Long id, String type, String location, int duration)
+  public static void addExercise(Long id, String name, String location, int duration)
   {
-    Exercise exercise = new Exercise(type, location, duration);
+    Exercise exercise = new Exercise(name, location, duration);
     Exerciselist exerciselist = Exerciselist.findById(id);
-    exerciselist.exerciseDetails.add(exercise);
+    exerciselist.exercises.add(exercise);
     exerciselist.save();
     redirect ("/exerciselists/" + id);
   }

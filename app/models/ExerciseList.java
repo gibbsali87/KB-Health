@@ -12,14 +12,15 @@ import play.db.jpa.Model;
 @Entity
 public class Exerciselist extends Model
 {
-  public String type;
+  public String name;
   @OneToMany(cascade = CascadeType.ALL)
-  public List<Exercise> exerciseDetails = new ArrayList<Exercise>();
+  public List<Exercise> exercises = new ArrayList<Exercise>();
   public int duration;
 
-  public Exerciselist(String type, int duration)
+  public Exerciselist(String name, int duration)//,int durationAll)
   {
-    this.type = type;
+    this.name = name;
     this.duration = duration;
+   // this.durationAll = durationAll;
   }
 }

@@ -4,24 +4,24 @@
 
 # Home page
 GET     /                                       Start.index
+
+GET    /signup                                  Members.signup
+GET    /login                                   Members.login
+POST   /register                                Members.register
+POST   /authenticate                            Members.authenticate
+GET    /logout                                  Members.logout
+
 GET     /dashboard                              Dashboard.index
 GET     /dashboard/deleteexerciselist/{id}      Dashboard.deleteexerciselist
+
 POST    /dashboard/addexerciselist              Dashboard.addExerciselist
 
-GET     /member                                 Member.index
-POST    /member/addmember                       Member.addUser
 GET     /about                                  About.index
 GET     /trainer                                Trainer.index
-POST    /trainer/addtrainer                     Trainer.addPerson
-GET     /login                                  Login.login
-POST    /authenticate                            Login.authenticate
-GET     /register								Register.index
+GET     /exerciselists/{id}                         ExerciseDetails.index
+GET     /exerciselists/{id}/deleteexercise/{exerciseid}     ExerciseDetails.deleteExercise
 
-GET     /memberDetails                    		MemberDetails.index
-GET     /member/{id}                     		MemberDetails.index
-GET     /exerciselists/{id}/deleteexercise/{songexercise}     MemberDetails.deleteExercise
-
-POST    /exerciseDetails/{id}/addexercise      MemberDetails.addExercise
+POST    /exerciselists/{id}/addexercise                  ExerciseDetails.addExercise
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

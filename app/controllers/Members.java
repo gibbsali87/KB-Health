@@ -4,23 +4,24 @@ import models.User;
 import play.Logger;
 import play.mvc.Controller;
 
-public class Login extends Controller
-{/*
+public class Members extends Controller
+{
   public static void signup()
   {
     render("signup.html");
   }
+
+  public static void login()
+  {
+    render("login.html");
+  }
+
   public static void register(String firstname, String lastname, String email, String password)
   {
     Logger.info("Registering new user " + email);
     User user = new User(firstname, lastname, email, password);
     user.save();
     redirect("/");
-  }*/
-
-  public static void login()
-  {
-      render("login.html");
   }
 
   public static void authenticate(String email, String password)
@@ -47,9 +48,9 @@ public class Login extends Controller
   public static User getLoggedInMember()
   {
     User user = null;
-    if (session.contains("logged_in_Memberid")) {
-      String memberId = session.get("logged_in_Memberid");
-      user = User.findById(Long.parseLong(memberId));
+    if (session.contains("logged_in_Userid")) {
+      String userId = session.get("logged_in_Userid");
+      user = User.findById(Long.parseLong(userId));
     } else {
       login();
     }

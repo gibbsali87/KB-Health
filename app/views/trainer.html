@@ -1,34 +1,38 @@
 #{extends 'main.html' /}
-#{set title:'Trainer' /}
+#{set name:'Dashboard' /}
 
 #{menu id:"trainer"/}
 
-<section class="ui raised segment">
-  <header class="ui header">
-    Trainer List
-  </header>
-  <div class="ui bulleted list">
-  #{list items:trainerlist, as:'trainer'}
-    <div class="ui item"> ${trainer.name} </div>
-    <div class="ui item"> ${trainer.email} </div>
-    <div class="ui item"> ${trainer.address} </div>
-    <div class="ui item"> ${trainer.gender} </div>
-  #{/list}
-  </div>
+  <section class="ui segment">
+  <h2 class="ui header">
+    All Known Exercises in the Database:
+  </h2>
+  <table class="ui fixed table">
+    <thead>
+      <tr>
+        <th>ID </th>
+        <th>Song</th>
+        <th>Location</th>
+        <th>Duration</th>
+      </tr>
+    </thead>
+    <tbody>
+      #{list items:exercises, as:'exercise'}
+        <tr>
+          <td>
+            ${exercise.id}
+          </td>
+          <td>
+            ${exercise.name}
+          </td>
+          <td>
+            ${exercise.location}
+          </td>
+          <td>        
+            ${exercise.duration}
+          </td>        
+        </tr>
+      #{/list}
+    </tbody>
+  </table>
 </section>
-
-
-<form class="ui stacked segment form" action="/trainer/addPerson" method="POST">
-  <div class="field">
-    <label>Name</label>
-    <input placeholder="Full Name" type="text" name="name"> </br>
-    <input placeholder="Email" type="text" name="email">
-    <input placeholder="Password" type="text" name="password">
-    <input placeholder="Confirm Password" type="text" name="">
-    <input placeholder="Address" type="text" name="address">
-    <input placeholder="Gemder" type="text" name="gender">
-    
-  </div>
-  <button type="submit" class="btn btn-primary">Add Trainer</button>
-</form>
-

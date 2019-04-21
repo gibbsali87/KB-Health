@@ -7,13 +7,13 @@ import play.db.jpa.Model;
 @Entity
 public class Exercise extends Model
 {
-  public String type;
+  public String name;
   public String location;
   public int duration;
   
-  public Exercise(String type, String location, int duration)
+  public Exercise(String name, String location, int duration)
   {
-    this.type = type;
+    this.name = name;
     this.location = location;
     this.duration = duration;
   }

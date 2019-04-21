@@ -1,15 +1,15 @@
 #{extends 'main.html' /}
-#{set title:'Dashboard' /}
+#{set name:'Dashboard' /}
 
 #{menu id:"dashboard"/}
 
-#{list items:listexercises, as:'exerciselist'}
+#{list items:exerciselists, as:'exerciselist'}
   <section class="ui segment">
     <h2 class="ui header">
-      ${exerciselist.type} 
+      ${exerciselist.name} 
     </h2>
       <p> Total Duration: ${exerciselist.duration} </p>
-      <a href="/listexercises/${exerciselist.id}" class="ui icon button">
+      <a href="/exerciselists/${exerciselist.id}" class="ui icon button">
         <i class="icon folder open"></i>
       </a>
       <a href="/dashboard/deleteexerciselist/${exerciselist.id}" class="ui icon button">
