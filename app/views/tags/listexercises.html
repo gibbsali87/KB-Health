@@ -4,7 +4,7 @@
       <th>Exercise</th>
       <th>Location</th>
       <th>Duration</th>
-      <th>Total Duration</th>
+      <th>Calories Burnt</th>
       <th></th>
     </tr>
   </thead>
@@ -21,12 +21,33 @@
           ${exercise.duration}
         </td>  
         <td>        
-         ${exercise.duration}
+         ${exercise.duration*10}
         </td>    
          <td>
             <a href="/exerciselists/${_exerciselist.id}/deleteexercise/${exercise.id}" class="ui tiny red button">Delete Exercise</a>
           </td>         
       </tr>
     #{/list}
+  </tbody>
+</table>
+
+  <table class="ui fixed table">
+    <thead>
+    <tr>
+      <th>Total Exercise Time</th>
+      <th>Total Calories Burnt</th>
+    </tr>
+    </thead>
+  <tbody>
+  #{list items:_exerciselist, as:'exerciselist'}
+  <tr>
+    <td>
+    ${exerciselist.duration}
+    </td>
+    <td>
+    ${exerciselist.duration*10}
+    </td>
+  </tr>
+  #{/list}
   </tbody>
 </table>

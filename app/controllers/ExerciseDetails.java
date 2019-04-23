@@ -16,6 +16,8 @@ public class ExerciseDetails extends Controller
     render("exerciselist.html", exerciselist);
   }
 
+
+
   public static void deleteExercise (Long id, Long exerciseid)
   {
     Exerciselist exerciselist = Exerciselist.findById(id);
@@ -35,4 +37,6 @@ public class ExerciseDetails extends Controller
     exerciselist.save();
     redirect ("/exerciselists/" + id);
   }
+
+
 }
