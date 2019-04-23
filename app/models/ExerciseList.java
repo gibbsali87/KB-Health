@@ -17,10 +17,9 @@ public class Exerciselist extends Model
   public List<Exercise> exercises = new ArrayList<Exercise>();
   public int duration;
 
-  public Exerciselist(String name, int duration)//,int durationAll)
+  public Exerciselist(String name, int duration)
   {
     this.name = name;
     this.duration = duration;
-   // this.durationAll = durationAll;
   }
 }

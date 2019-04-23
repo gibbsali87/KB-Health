@@ -13,18 +13,21 @@ public class User extends Model
 {
   public String firstname;
   public String lastname;
+  public String gender;
   public String email;
   public String password;
+  public String address;
 
-  @OneToMany(cascade = CascadeType.ALL)
-  public List<Exerciselist> exerciselists = new ArrayList<Exerciselist>();
 
-  public User(String firstname, String lastname, String email, String password)
+
+  public User(String firstname, String lastname, String gender, String email,  String password, String address)
   {
     this.firstname = firstname;
     this.lastname = lastname;
+    this.gender = gender;
     this.email = email;
     this.password = password;
+    this.address = address;
   }
 
   public static User findByEmail(String email)

@@ -50,7 +50,7 @@ Exerciselist(el3):
   - s5
   - s6
 
-User(u1):
+UserDetails(u1):
   firstname: Arshad
   lastname: Ali
   email: Arshad@KBHealth.ie
@@ -59,7 +59,7 @@ User(u1):
   - el1
   - el2
 
-User(u2):
+UserDetails(u2):
   firstname: Kate
   lastname: Kida
   email: kate@KBHealth.ie

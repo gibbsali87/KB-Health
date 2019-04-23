@@ -1,6 +1,7 @@
 package controllers;
 
 import models.User;
+import models.UserDetails;
 import play.Logger;
 import play.mvc.Controller;
 
@@ -16,10 +17,10 @@ public class Members extends Controller
     render("login.html");
   }
 
-  public static void register(String firstname, String lastname, String email, String password)
+  public static void register(String firstname, String lastname, String email, String password, String address, float height, float weight, String gender, String chosenPackage)
   {
     Logger.info("Registering new user " + email);
-    User user = new User(firstname, lastname, email, password);
+    UserDetails user = new UserDetails(firstname, lastname,gender, email, password, address, height, weight,  chosenPackage);
     user.save();
     redirect("/");
   }
