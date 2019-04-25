@@ -48,5 +48,7 @@ public class UserDetails extends User{
     }
 
     @OneToMany(cascade = CascadeType.ALL)
-    public List<Exerciselist> exerciselists = new ArrayList<Exerciselist>();
+    public List<UserDetails> userDetailsList = new ArrayList<UserDetails>();
+
+
 }

@@ -1,9 +1,15 @@
 package controllers;
 
+import com.sun.xml.internal.stream.util.ThreadLocalBufferAllocator;
+import models.Exercise;
+import models.Exerciselist;
 import models.User;
 import models.UserDetails;
 import play.Logger;
 import play.mvc.Controller;
+
+import java.lang.reflect.Member;
+import java.util.List;
 
 public class Members extends Controller
 {
@@ -24,6 +30,7 @@ public class Members extends Controller
     user.save();
     redirect("/");
   }
+
 
   public static void authenticate(String email, String password)
   {
@@ -56,5 +63,12 @@ public class Members extends Controller
       login();
     }
     return user;
+  }
+
+  public static void getMemberDetails()
+  {
+    Logger.info("Rendeing MemberDetails");
+    List<User> memberlist = User.findAll();
+    render("memberdetails.html", memberlist);
   }
 }

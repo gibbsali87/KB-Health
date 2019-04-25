@@ -53,8 +53,14 @@ Exerciselist(el3):
 UserDetails(u1):
   firstname: Arshad
   lastname: Ali
+  gender: Male
+  height: 166
+  startWeight: 104
+  address: Apt 5 Sallins
+  chosenPackage: Premium
   email: Arshad@KBHealth.ie
   password: 123
+
   exerciselists:
   - el1
   - el2

@@ -38,5 +38,4 @@ public class ExerciseDetails extends Controller
     redirect ("/exerciselists/" + id);
   }
 
-
 }

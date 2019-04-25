@@ -1,0 +1,36 @@
+#{extends 'main.html' /}
+#{set title:'Member' /}
+
+#{menu id:"memberlist"/}
+
+<section class="ui raised segment">
+    <header class="ui header">
+        Member Details
+    </header>
+    <div class="ui bulleted list">
+    #{list items:memberlist, as:'member'}
+        <div class="ui item">First Name: ${member.firstname} </div>
+        <div class="ui item">Last Name: ${member.lastname} </div>
+        <div class="ui item">Gender: ${member.gender} </div>
+        <div class="ui item">Email: ${member.email} </div>
+        <div class="ui item">Address: ${member.address} </div>
+        <div class="ui item">Height: ${member.height} </div>
+        <div class="ui item">Weight: ${member.startWeight} </div>
+        <div class="ui item">Package: ${member.chosenPackage} </div>
+
+
+#{/list}
+    </div>
+</section>
+
+
+<form class="ui stacked segment form" action="/member/addUser" method="POST">
+    <div class="field">
+        <label>Name</label>
+        <input placeholder="Title" type="text" name="name"> </br>
+        <input placeholder="Title" type="text" name="email">
+        <input placeholder="Title" type="text" name="address">
+        <input placeholder="Title" type="text" name="gender">
+    </div>
+    <button class="ui blue submit button">Add Member</button>
+</form>
