@@ -8,7 +8,7 @@
         Member Details
     </header>
     <div class="ui bulleted list">
-    #{list items:memberlist, as:'member'}
+     #{list items:memberlist, as:'member'}
         <div class="ui item">First Name: ${member.firstname} </div>
         <div class="ui item">Last Name: ${member.lastname} </div>
         <div class="ui item">Gender: ${member.gender} </div>
@@ -19,8 +19,7 @@
         <div class="ui item">BMI: ${member.startWeight/((member.height/100)*(member.height/100))} </div>
         <div class="ui item">Package: ${member.chosenPackage} </div>
         <div class="ui item">Comment: ${member.comment} </div>
-
-#{/list}
+     #{/list}
     </div>
 </section>
 
@@ -30,8 +29,8 @@
     Comments Section
     </h2>
     <p> See All
-    <a href="/commentdetails" class="ui icon button">
+     <a href="/commentdetails" class="ui icon button">
         <i class="icon comment"></i>
-    </a>
+     </a>
     </p>
 </section>

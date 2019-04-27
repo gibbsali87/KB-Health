@@ -20,7 +20,7 @@ public class User extends Model
 
 
 
-  public User(String firstname, String lastname, String gender, String email,  String password, String address)
+    public User(String firstname, String lastname, String gender, String email,  String password, String address)
   {
     this.firstname = firstname;
     this.lastname = lastname;
@@ -39,4 +39,7 @@ public class User extends Model
   {
     return this.password.equals(password);
   }
+
+  @OneToMany(cascade = CascadeType.ALL)
+  public List<Exerciselist> exerciselists = new ArrayList<Exerciselist>();
 }
