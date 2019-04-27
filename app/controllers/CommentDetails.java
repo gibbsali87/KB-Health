@@ -13,11 +13,16 @@ public class CommentDetails extends Controller
     public static void index()
     {
         Logger.info("Rendering CommentDetails");
-        List<Commentlist> commentlists = Commentlist.findAll();
-        render ("commentdetails.html", commentlists);
+        List<Commentlist> commentlist = Commentlist.findAll();
+        render ("commentdetails.html", commentlist);
     }
 
-
+    public static void allComments(Long id)
+    {
+        Commentlist commentlist = Commentlist.findById(id);
+        Logger.info ("Commentlist id = " + id);
+        render("commentlist.html", commentlist);
+    }
 
     public static void deleteComment (Long id, Long commentid)
     {
@@ -44,7 +49,15 @@ public class CommentDetails extends Controller
         Commentlist commentlist = new Commentlist (comment, date);
         Logger.info ("Adding a new commentlist called " + comment);
         commentlist.save();
-        redirect ("/commentlist");
+        redirect ("/commentdetails");
     }
+    public static void deleteCommentlist (Long id)
+    {
+        Commentlist commentlist = Commentlist.findById(id);
+        Logger.info ("Deleting" + commentlist.comment);
+        commentlist.delete();
+        redirect ("/commentdetails");
+    }
+
 
 }

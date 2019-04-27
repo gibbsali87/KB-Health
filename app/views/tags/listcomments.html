@@ -10,16 +10,18 @@
     #{list items:_commentlist.comments, as:'comment'}
     <tr>
         <td>
-        ${comments.comment}
+        ${comment.comment}
         </td>
         <td>
-        ${comments.date}
+        ${comment.date}
         </td>
 
         <td>
-            <a href="/commentlists/${_commentlist.id}/deletecomment/${comments.id}" class="ui tiny red button">Delete Comment</a>
+            <a href="/commentlist/${_commentlist.id}/deletecomment/${comment.id}" class="ui tiny red button">Delete Comment</a>
         </td>
     </tr>
     #{/list}
     </tbody>
 </table>
+
+

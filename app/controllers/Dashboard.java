@@ -3,9 +3,7 @@ package controllers;
 import models.Exerciselist;
 import play.Logger;
 import play.mvc.Controller;
-import models.Comment;
 
-import java.util.Date;
 import java.util.List;
 
 public class Dashboard extends Controller
@@ -32,15 +30,5 @@ public class Dashboard extends Controller
     exerciselist.save();
     redirect ("/dashboard");
   }
-
-  public static void addComment (String comment, Date date)
-  {
-    Comment comments = new Comment (comment, date);
-    Logger.info ("Adding a new comment " + comments);
-    comments.save();
-    render("memberdetails.html", comments);
-  }
-
-
 }
 

@@ -1,13 +1,14 @@
 #{extends 'main.html' /}
 #{set name:'Commentlist' /}
 
-#{menu id:"Commentlist"/}
-
+#{menu id:"commentdetails"/}
 
 <section class="ui segment">
     <h2 class="ui header">
-    ${commentlist.comment}
+    Comments
     </h2>
 #{listcomments commentlist:commentlist /}
 #{addcomment commentlist:commentlist /}
 </section>
+
+

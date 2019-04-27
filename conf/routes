@@ -11,7 +11,7 @@ POST   /register                                Members.register
 POST   /authenticate                            Members.authenticate
 GET    /logout                                  Members.logout
 
-GET /getmemberdetails                              Members.getMemberDetails
+GET /getmemberdetails                           Members.getMemberDetails
 
 GET     /dashboard                              Dashboard.index
 GET     /dashboard/deleteexerciselist/{id}      Dashboard.deleteexerciselist
@@ -27,7 +27,12 @@ GET     /exerciselists/{id}/deleteexercise/{exerciseid}     ExerciseDetails.dele
 
 POST    /exerciselists/{id}/addexercise                  ExerciseDetails.addExercise
 
-GET /commentlist    CommentDetails.index
+GET /commentdetails    CommentDetails.index
+GET /commentlists/{id}    CommentDetails.allComments
+POST /commentlists/{id}/addcomment             CommentDetails.addComment
+GET /commentlist/{id}/deletecomment/{commentid}         CommentDetails.deleteComment
+GET /commentdetails/deletecommentlist/{id}     CommentDetails.deleteCommentlist
+
 # Ignore favicon requests
 GET     /favicon.ico                            404
 
