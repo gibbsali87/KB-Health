@@ -1,0 +1,25 @@
+<table class="ui fixed table">
+    <thead>
+    <tr>
+        <th>Comment</th>
+        <th>Date</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    #{list items:_commentlist.comments, as:'comment'}
+    <tr>
+        <td>
+        ${comments.comment}
+        </td>
+        <td>
+        ${comments.date}
+        </td>
+
+        <td>
+            <a href="/commentlists/${_commentlist.id}/deletecomment/${comments.id}" class="ui tiny red button">Delete Comment</a>
+        </td>
+    </tr>
+    #{/list}
+    </tbody>
+</table>

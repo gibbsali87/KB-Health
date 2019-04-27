@@ -2,14 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7171c29b-c260-4f87-be2c-19d435473f09" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/controllers/Members.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Members.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/UserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/UserDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/CommentDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/Comment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/Commentlist.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/commentdetails.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/commentlist.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/tags/addcomment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/tags/addcommentlist.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/tags/listcomments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KB Health.iws" beforeDir="false" afterPath="$PROJECT_DIR$/KB Health.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Dashboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/ExerciseDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/ExerciseDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/ExerciseList.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/ExerciseList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/dashboard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/memberdetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/memberdetails.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/tags/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tags/menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/routes" beforeDir="false" afterPath="$PROJECT_DIR$/conf/routes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_dashboard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_memberdetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_memberdetails.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_tags_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_tags_menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.Members" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.Members" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/models.UserDetails" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/models.UserDetails" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.Dashboard" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.Dashboard" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.ExerciseDetails" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.ExerciseDetails" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/models.ExerciseList" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/models.ExerciseList" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/classes/controllers/Dashboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/controllers/Dashboard.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/tmp/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,43 +37,45 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/Members.java">
+        <entry file="file://$PROJECT_DIR$/conf/routes">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/UserDetails.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="238">
+              <caret line="20" column="62" selection-start-line="20" selection-start-column="62" selection-end-line="20" selection-end-column="62" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/memberdetails.html">
+        <entry file="file://$PROJECT_DIR$/app/views/commentlist.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="22" column="10" lean-forward="true" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+            <state relative-caret-position="204">
+              <caret line="12" column="10" lean-forward="true" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/CommentDetails.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/dashboard.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/commentdetails.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -87,25 +102,36 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/models/Exerciselist.java" />
         <option value="$PROJECT_DIR$/app/views/tags/listexercises.html" />
         <option value="$PROJECT_DIR$/app/models/User.java" />
         <option value="$PROJECT_DIR$/app/views/signup.html" />
         <option value="$PROJECT_DIR$/conf/data.yml" />
-        <option value="$PROJECT_DIR$/app/controllers/ExerciseDetails.java" />
-        <option value="$PROJECT_DIR$/app/controllers/Dashboard.java" />
         <option value="$PROJECT_DIR$/app/views/userDetails.html" />
         <option value="$PROJECT_DIR$/app/views/NewTest.html" />
         <option value="$PROJECT_DIR$/app/controllers/NewTest.java" />
-        <option value="$PROJECT_DIR$/conf/routes" />
         <option value="$PROJECT_DIR$/app/views/tags/menu.html" />
         <option value="$PROJECT_DIR$/app/models/UserDetails.java" />
         <option value="$PROJECT_DIR$/app/controllers/Members.java" />
+        <option value="$PROJECT_DIR$/app/views/tags/addexerciselist.html" />
+        <option value="$PROJECT_DIR$/app/models/Comment.java" />
+        <option value="$PROJECT_DIR$/app/models/Exerciselist.java" />
+        <option value="$PROJECT_DIR$/app/models/Commentlist.java" />
+        <option value="$PROJECT_DIR$/app/controllers/ExerciseDetails.java" />
+        <option value="$PROJECT_DIR$/app/views/tags/addcomment.html" />
+        <option value="$PROJECT_DIR$/app/views/tags/listcomments.html" />
         <option value="$PROJECT_DIR$/app/views/memberdetails.html" />
+        <option value="$PROJECT_DIR$/conf/routes" />
+        <option value="$PROJECT_DIR$/app/views/comments.html" />
+        <option value="$PROJECT_DIR$/app/controllers/Dashboard.java" />
+        <option value="$PROJECT_DIR$/app/views/tags/addcommentlist.html" />
+        <option value="$PROJECT_DIR$/app/views/dashboard.html" />
+        <option value="$PROJECT_DIR$/app/controllers/CommentDetails.java" />
+        <option value="$PROJECT_DIR$/app/views/commentdetails.html" />
+        <option value="$PROJECT_DIR$/app/views/commentlist.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="width" value="1820" />
     <option name="height" value="1398" />
@@ -209,7 +235,7 @@
       <workItem from="1556045931432" duration="6510000" />
       <workItem from="1556129332566" duration="8630000" />
       <workItem from="1556222555133" duration="3095000" />
-      <workItem from="1556367296242" duration="2914000" />
+      <workItem from="1556367296242" duration="11913000" />
     </task>
     <task id="LOCAL-00001" summary="Clories, Total time">
       <created>1555978496600</created>
@@ -229,13 +255,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25862000" />
+    <option name="totallyTimeSpent" value="34861000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="0" width="1456" height="1118" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.245702" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.245702" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -250,7 +276,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3306288" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.11663286" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
@@ -309,13 +335,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="User Details added&#10;Usage of Programming code and logic" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/Exercise.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/signup.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
@@ -344,86 +363,11 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/NewTest.html" />
-    <entry file="file://$PROJECT_DIR$/app/views/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Exerciselist.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
-          <folding>
-            <element signature="e#365#375#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/Dashboard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/NewTest.java" />
-    <entry file="file://$PROJECT_DIR$/app/controllers/ExerciseDetails.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/exerciselist.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tags/listexercises.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="7" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conf/routes">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/tags/menu.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/Members.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
@@ -437,6 +381,74 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/Members.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="68" column="11" selection-start-line="68" selection-start-column="11" selection-end-line="68" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Exercise.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Exerciselist.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#413#423#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/tags/addexercise.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="16" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/tags/addcomment.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/tags/addexerciselist.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/tags/listexercises.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="52" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/memberdetails.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/userDetails.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -444,10 +456,105 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/memberdetails.html">
+    <entry file="file://$PROJECT_DIR$/app/views/tags/listcomments.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="22" column="10" lean-forward="true" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+        <state relative-caret-position="408">
+          <caret line="24" column="8" lean-forward="true" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/ExerciseDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf/application.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3625">
+          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/exerciselist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/Dashboard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/tags/addcommentlist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="7" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf/routes">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="20" column="62" selection-start-line="20" selection-start-column="62" selection-end-line="20" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Commentlist.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Comment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/CommentDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/commentdetails.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/commentlist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="10" lean-forward="true" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
         </state>
       </provider>
     </entry>

@@ -1,0 +1,21 @@
+#{extends 'main.html' /}
+#{set name:'CommentDetails' /}
+
+#{menu id:"commentdetails"/}
+
+
+#{list items:commentlists, as:'commentlist'}
+<section class="ui segment">
+    <h2 class="ui header">
+    ${commentlist.comment}
+    </h2>
+    <p> Date: ${commentlist.date} </p>
+    <a href="/commentlists/${commentlist.id}" class="ui icon button">
+        <i class="icon folder open"></i>
+    </a>
+    <a href="/commentdetails/deletecommentlist/${commentlist.id}" class="ui icon button">
+        <i class="icon trash"></i>
+    </a>
+</section>
+#{/list}
+#{addcommentlist /}

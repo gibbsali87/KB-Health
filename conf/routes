@@ -18,6 +18,8 @@ GET     /dashboard/deleteexerciselist/{id}      Dashboard.deleteexerciselist
 
 POST    /dashboard/addexerciselist              Dashboard.addExerciselist
 
+POST    /dashboard/addcommentlist               CommentDetails.addCommentlist
+
 GET     /about                                  About.index
 GET     /trainer                                Trainer.index
 GET     /exerciselists/{id}                         ExerciseDetails.index
@@ -25,6 +27,7 @@ GET     /exerciselists/{id}/deleteexercise/{exerciseid}     ExerciseDetails.dele
 
 POST    /exerciselists/{id}/addexercise                  ExerciseDetails.addExercise
 
+GET /commentlist    CommentDetails.index
 # Ignore favicon requests
 GET     /favicon.ico                            404
 
