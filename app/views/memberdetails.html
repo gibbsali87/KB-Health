@@ -17,11 +17,20 @@
         <div class="ui item">Height: ${member.height} </div>
         <div class="ui item">Weight: ${member.startWeight} </div>
         <div class="ui item">Package: ${member.chosenPackage} </div>
-
+        <div class="ui item">Comment: ${member.comment} </div>
 
 #{/list}
     </div>
 </section>
+
+<form class="ui stacked segment form" action="/member/addUser" method="POST">
+    <div class="field">
+        <label>Comment</label>
+        <input placeholder="Comment" type="text" name="comment">
+    </div>
+    <button class="ui blue submit button">Add Comment</button>
+</form>
+
 
 
 <form class="ui stacked segment form" action="/member/addUser" method="POST">

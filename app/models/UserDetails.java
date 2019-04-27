@@ -12,13 +12,15 @@ public class UserDetails extends User{
     private float height;
     private float startWeight;
     private String chosenPackage;
+    private String comment;
 
     public UserDetails(String firstname, String lastname,String gender,String email, String password, String address,
-                        float height, float startWeight, String chosenPackage) {
+                        float height, float startWeight, String chosenPackage, String comment) {
         super(firstname, lastname,gender, email,password,address );
         setHeight(height);
         setStartWeight(startWeight);
         setChosenPackage(chosenPackage);
+        setComment(comment);
     }
 
     public float getHeight() {
@@ -46,6 +48,10 @@ public class UserDetails extends User{
     {
         this.chosenPackage = chosenPackage;
     }
+
+    public void setComment(String comment){this.comment = comment;}
+
+    public String getComment(){return comment;}
 
     @OneToMany(cascade = CascadeType.ALL)
     public List<UserDetails> userDetailsList = new ArrayList<UserDetails>();

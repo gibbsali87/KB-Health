@@ -1,14 +1,11 @@
 package controllers;
 
-import com.sun.xml.internal.stream.util.ThreadLocalBufferAllocator;
-import models.Exercise;
-import models.Exerciselist;
+
 import models.User;
 import models.UserDetails;
 import play.Logger;
 import play.mvc.Controller;
 
-import java.lang.reflect.Member;
 import java.util.List;
 
 public class Members extends Controller
@@ -23,10 +20,10 @@ public class Members extends Controller
     render("login.html");
   }
 
-  public static void register(String firstname, String lastname, String email, String password, String address, float height, float weight, String gender, String chosenPackage)
+  public static void register(String firstname, String lastname, String email, String password, String address, float height, float weight, String gender, String chosenPackage, String comment)
   {
     Logger.info("Registering new user " + email);
-    UserDetails user = new UserDetails(firstname, lastname,gender, email, password, address, height, weight,  chosenPackage);
+    UserDetails user = new UserDetails(firstname, lastname,gender, email, password, address, height, weight,  chosenPackage, comment);
     user.save();
     redirect("/");
   }
