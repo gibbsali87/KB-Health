@@ -1,24 +1,25 @@
 #{extends 'main.html' /}
-#{set title:'Member' /}
+#{set title:'Profile' /}
 
-#{menu id:"memberlist"/}
+#{menu id:"members"/}
 
 <section class="ui raised segment">
     <header class="ui header">
         Member Details
     </header>
     <div class="ui bulleted list">
-     #{list items:memberlist, as:'member'}
-        <div class="ui item">First Name: ${member.firstname} </div>
-        <div class="ui item">Last Name: ${member.lastname} </div>
-        <div class="ui item">Gender: ${member.gender} </div>
-        <div class="ui item">Email: ${member.email} </div>
-        <div class="ui item">Address: ${member.address} </div>
-        <div class="ui item">Height: ${member.height} </div>
-        <div class="ui item">Weight: ${member.startWeight} </div>
-        <div class="ui item">BMI: ${member.startWeight/((member.height/100)*(member.height/100))} </div>
-        <div class="ui item">Package: ${member.chosenPackage} </div>
-        <div class="ui item">Comment: ${member.comment} </div>
+     #{list items:userlists, as:'user'}
+        <div class="ui item">First Name: ${user.firstname} </div>
+        <div class="ui item">Last Name: ${user.lastname} </div>
+        <div class="ui item">Gender: ${user.gender} </div>
+        <div class="ui item">Email: ${user.email} </div>
+        <div class="ui item">Address: ${user.address} </div>
+        <div class="ui item">Height: ${user.height} </div>
+        <div class="ui item">Weight: ${user.startWeight} </div>
+        <div class="ui item">BMI: ${user.startWeight/((user.height/100)*(user.height/100))} </div>
+        <div class="ui item">Package: ${user.chosenPackage} </div>
+        <div class="ui item">Comment: ${user.comment} </div>
+         <div class="ui item">Commentssssss </div>
      #{/list}
     </div>
 </section>

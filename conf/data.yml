@@ -50,7 +50,8 @@ Exerciselist(el3):
   - s5
   - s6
 
-UserDetails(u1):
+
+User(u1):
   firstname: Arshad
   lastname: Ali
   gender: Male
@@ -61,11 +62,13 @@ UserDetails(u1):
   email: Arshad@KBHealth.ie
   password: 123
 
+  user:
+    - User(u1)
   exerciselists:
-  - el1
-  - el2
+    - el1
+    - el2
 
-UserDetails(u2):
+User(u2):
   firstname: Kate
   lastname: Kida
   email: kate@KBHealth.ie

@@ -11,7 +11,7 @@ POST   /register                                Members.register
 POST   /authenticate                            Members.authenticate
 GET    /logout                                  Members.logout
 
-GET /getmemberdetails                           Members.getMemberDetails
+GET /getmemberdetails                           Members.index
 
 GET     /dashboard                              Dashboard.index
 GET     /dashboard/deleteexerciselist/{id}      Dashboard.deleteexerciselist

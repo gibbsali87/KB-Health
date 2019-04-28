@@ -1,19 +1,37 @@
 #{extends 'main.html' /}
-#{set name:'Userdetails' /}
+#{set title:'Profile' /}
 
-#{menu id:"userdetails"/}
+#{menu id:"members"/}
 
-#{list items:userDetailsList, as:'userdetails'}
+<section class="ui raised segment">
+    <header class="ui header">
+        Member Details
+    </header>
+    <div class="ui bulleted list">
+    #{list items:userlists, as:'user'}
+        <div class="ui item">First Name: ${user.firstname} </div>
+        <div class="ui item">Last Name: ${user.lastname} </div>
+        <div class="ui item">Gender: ${user.gender} </div>
+        <div class="ui item">Email: ${user.email} </div>
+        <div class="ui item">Address: ${user.address} </div>
+        <div class="ui item">Height: ${user.height} </div>
+        <div class="ui item">Weight: ${user.startWeight} </div>
+        <div class="ui item">BMI: ${user.startWeight/((user.height/100)*(user.height/100))} </div>
+        <div class="ui item">Package: ${user.chosenPackage} </div>
+        <div class="ui item">Comment: ${user.comment} </div>
+        <div class="ui item">Commentssssss </div>
+    #{/list}
+    </div>
+</section>
+
+
 <section class="ui segment">
     <h2 class="ui header">
-    ${userDetailsList.name}
+        Comments Section
     </h2>
-    <p> Name: ${userDetailsList.firstname} </p>
-    <a href="/userDetails/${exerciselist.id}" class="ui icon button">
-        <i class="icon folder open"></i>
-    </a>
-    <a href="/dashboard/deleteexerciselist/${exerciselist.id}" class="ui icon button">
-        <i class="icon trash"></i>
-    </a>
+    <p> See All
+        <a href="/commentdetails" class="ui icon button">
+            <i class="icon comment"></i>
+        </a>
+    </p>
 </section>
-#{/list}

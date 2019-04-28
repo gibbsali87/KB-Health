@@ -15,8 +15,7 @@ public class Dashboard extends Controller
   {
     Logger.info("Rendering Dashboard");
     User user = getLoggedInUser();
-    List<Exerciselist> exerciselists;
-    exerciselists = user.exerciselists;
+    List<Exerciselist> exerciselists = user.exerciselists;
     render ("dashboard.html", exerciselists);
   }
 

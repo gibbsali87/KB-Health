@@ -2,7 +2,6 @@ package controllers;
 
 
 import models.User;
-import models.UserDetails;
 import play.Logger;
 import play.mvc.Controller;
 
@@ -10,6 +9,13 @@ import java.util.List;
 
 public class Members extends Controller
 {
+  public static void index()
+  {
+    Logger.info("Rendering Dashboard 1");
+    User user = getLoggedInUser();
+    List<User> userlists = user.userlists;
+    render ("memberdetails.html", userlists);
+  }
   public static void signup()
   {
     render("signup.html");
@@ -20,12 +26,13 @@ public class Members extends Controller
     render("login.html");
   }
 
-  public static void register(String firstname, String lastname, String email, String password, String address, float height, float weight, String gender, String chosenPackage, String comment)
+  public static void register(Long id, String firstname, String lastname, String email, String password, String address, float height, float weight, String gender, String chosenPackage, String comment)
   {
-    Logger.info("Registering new user " + email);
-    UserDetails user = new UserDetails(firstname, lastname,gender, email, password, address, height, weight,  chosenPackage, comment);
-    user.save();
-    redirect("/");
+    User userlist = new User (id,firstname, lastname,gender, email, password, address, height, weight,  chosenPackage, comment);
+    Logger.info ("Adding a new userlist called " + firstname);
+    userlist.userlists.add(userlist);
+    userlist.save();
+    redirect ("/dashboard");
   }
 
 
@@ -60,13 +67,5 @@ public class Members extends Controller
       login();
     }
     return member;
-  }
-
-
-  public static void getMemberDetails()
-  {
-    Logger.info("Rendeing MemberDetails");
-    List<User> memberlist = User.findAll();
-    render("memberdetails.html", memberlist);
   }
 }
