@@ -9,7 +9,7 @@ import play.mvc.Controller;
 
 public class ExerciseDetails extends Controller
 {
-  public static void index(Long id)
+ public static void index(Long id)
   {
     Exerciselist exerciselist = Exerciselist.findById(id);
     Logger.info ("Exerciselist id = " + id);

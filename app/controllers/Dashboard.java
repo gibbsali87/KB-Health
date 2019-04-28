@@ -7,33 +7,39 @@ import play.mvc.Controller;
 
 import java.util.List;
 
+import static controllers.Members.*;
+
 public class Dashboard extends Controller
 {
   public static void index() 
   {
     Logger.info("Rendering Dashboard");
-   User user = Members.getLoggedInMember();
-   List<Exerciselist> exerciselists = user.exerciselists;
-//    List <Exerciselist>exerciselists = Exerciselist.findAll();
+    User user = getLoggedInUser();
+    List<Exerciselist> exerciselists;
+    exerciselists = user.exerciselists;
     render ("dashboard.html", exerciselists);
   }
 
   public static void deleteExerciselist (Long id)
   {
-    User user = Members.getLoggedInMember();
+    User user = getLoggedInUser();
     Exerciselist exerciselist = Exerciselist.findById(id);
-    Logger.info ("Removing" + exerciselist.name);
+    user.exerciselists.remove(exerciselist);
+    user.save();
     exerciselist.delete();
     redirect ("/dashboard");
   }
 
   public static void addExerciselist (String name)
   {
-    User user = Members.getLoggedInMember();
+    User user = getLoggedInUser();
     Exerciselist exerciselist = new Exerciselist (name, 0);
     Logger.info ("Adding a new exerciselist called " + name);
-    exerciselist.save();
+    user.exerciselists.add(exerciselist);
+    user.save();
     redirect ("/dashboard");
   }
+
 }
+
 

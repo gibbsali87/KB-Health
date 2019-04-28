@@ -1,7 +1,6 @@
 package controllers;
 
 
-import models.Commentlist;
 import models.User;
 import models.UserDetails;
 import play.Logger;
@@ -37,7 +36,7 @@ public class Members extends Controller
     User user = User.findByEmail(email);
     if ((user != null) && (user.checkPassword(password) == true)) {
       Logger.info("Authentication successful");
-      session.put("logged_in_Memberid", user.id);
+      session.put("logged_in_Userid", user.id);
       redirect ("/dashboard");
     } else {
       Logger.info("Authentication failed");
@@ -51,17 +50,18 @@ public class Members extends Controller
     redirect ("/");
   }
 
-  public static User getLoggedInMember()
+  public static User getLoggedInUser()
   {
-    User user = null;
+    User member = null;
     if (session.contains("logged_in_Userid")) {
       String userId = session.get("logged_in_Userid");
-      user = User.findById(Long.parseLong(userId));
+      member = User.findById(Long.parseLong(userId));
     } else {
       login();
     }
-    return user;
+    return member;
   }
+
 
   public static void getMemberDetails()
   {

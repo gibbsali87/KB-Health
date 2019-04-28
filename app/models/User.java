@@ -8,6 +8,7 @@ import javax.persistence.OneToMany;
 import java.util.ArrayList;
 import java.util.List;
 
+
 @Entity
 public class User extends Model
 {
@@ -18,9 +19,10 @@ public class User extends Model
   public String password;
   public String address;
 
+  @OneToMany(cascade = CascadeType.ALL)
+  public List<Exerciselist> exerciselists = new ArrayList<Exerciselist>();
 
-
-    public User(String firstname, String lastname, String gender, String email,  String password, String address)
+  public User(String firstname, String lastname, String gender, String email,  String password, String address)
   {
     this.firstname = firstname;
     this.lastname = lastname;
@@ -35,11 +37,11 @@ public class User extends Model
     return find("email", email).first();
   }
 
+
   public boolean checkPassword(String password)
   {
     return this.password.equals(password);
   }
 
-  @OneToMany(cascade = CascadeType.ALL)
-  public List<Exerciselist> exerciselists = new ArrayList<Exerciselist>();
+
 }
