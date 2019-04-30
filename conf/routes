@@ -33,6 +33,10 @@ POST /commentlists/{id}/addcomment             CommentDetails.addComment
 GET /commentlist/{id}/deletecomment/{commentid}         CommentDetails.deleteComment
 GET /commentdetails/deletecommentlist/{id}     CommentDetails.deleteCommentlist
 
+GET /assessment     AssessmentDetails.index
+POST /assessment/addassessment AssessmentDetails.addAssessment
+
+
 # Ignore favicon requests
 GET     /favicon.ico                            404
 

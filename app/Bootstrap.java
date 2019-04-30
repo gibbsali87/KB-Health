@@ -1,4 +1,6 @@
 import java.util.List;
+
+import models.User;
 import play.jobs.Job;
 import play.jobs.OnApplicationStart;
 import play.test.Fixtures;
@@ -8,8 +10,9 @@ public class Bootstrap extends Job
 {
     public void doJob()
     {
-
-      Fixtures.loadModels("data.yml");
-
+        if (User.count() == 0)
+        {
+            Fixtures.loadModels("data.yml");
+        }
     }
 }
