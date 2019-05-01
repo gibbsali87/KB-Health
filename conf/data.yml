@@ -27,7 +27,7 @@ Exercise(s7):
   location: Park
   duration: 60
 
-  
+
 Exerciselist(el1):
   name: Running
   duration: 150
@@ -67,6 +67,7 @@ User(u1):
   exerciselists:
     - el1
     - el2
+
 
 User(u2):
   firstname: Kate

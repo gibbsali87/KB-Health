@@ -29,6 +29,10 @@ public class User extends Model {
   @OneToMany(cascade = CascadeType.ALL)
   public List<User> userlists = new ArrayList<User>();
 
+  @OneToMany(cascade = CascadeType.ALL)
+  public List<Assessmentlist> assessments = new ArrayList<Assessmentlist>();
+
+
     public User(Long id, String firstname, String lastname, String gender, String email, String password, String address, float height, float startWeight, String chosenPackage, String comment) {
     this.firstname = firstname;
     this.lastname = lastname;

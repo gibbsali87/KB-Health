@@ -34,8 +34,13 @@ GET /commentlist/{id}/deletecomment/{commentid}         CommentDetails.deleteCom
 GET /commentdetails/deletecommentlist/{id}     CommentDetails.deleteCommentlist
 
 GET /assessment     AssessmentDetails.index
-POST /assessment/addassessment AssessmentDetails.addAssessment
-
+POST /assessment/{id}/addassessment AssessmentDetails.addAssessment
+POST /assessment/addassessmentlist              AssessmentDetails.addAssessmentlist
+GET /assessmentdetails   AssessmentDetails.index
+GET /assessmentlists/{id}    AssessmentDetails.allAssessments
+POST /assessmentlists/{id}/addassessment            AssessmentDetails.addAssessment
+GET /assessmentlist/{id}/deleteassessment/{assessmentid}         AssessmentDetails.deleteAssessment
+GET /assessmentdetails/deleteassessmentlist/{id}     AssessmentDetails.deleteAssessmentlist
 
 # Ignore favicon requests
 GET     /favicon.ico                            404
