@@ -22,15 +22,14 @@ public class User extends Model {
   public String chosenPackage;
   public String comment;
 
-
   @OneToMany(cascade = CascadeType.ALL)
-  public List<Exerciselist> exerciselists = new ArrayList<Exerciselist>();
+  public List<Assessmentlist> assessmentlists = new ArrayList<Assessmentlist>();
 
   @OneToMany(cascade = CascadeType.ALL)
   public List<User> userlists = new ArrayList<User>();
 
   @OneToMany(cascade = CascadeType.ALL)
-  public List<Assessmentlist> assessments = new ArrayList<Assessmentlist>();
+  public List<Assessment> assessments = new ArrayList<Assessment>();
 
 
     public User(Long id, String firstname, String lastname, String gender, String email, String password, String address, float height, float startWeight, String chosenPackage, String comment) {

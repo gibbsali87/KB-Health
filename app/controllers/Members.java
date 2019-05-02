@@ -8,20 +8,18 @@ import play.mvc.Controller;
 import java.util.List;
 
 public class Members extends Controller
-{/*
+{
   public static void index()
   {
-    Logger.info("Rendering Dashboard 1");
+    Logger.info("Rendering Members");
     User user = getLoggedInUser();
-    List<User> userlists = user.userlists;
-    render ("memberdetails.html", userlists);
-  }*/
-  public static void index()
-  {
+    render ("memberdetails.html", user);
+    /*
     Logger.info("Rendering Dashboard 2");
     User user = getLoggedInUser();
     List<User> userlists = user.userlists;
     render ("memberdetails.html", userlists);
+    */
   }
   public static void signup()
   {

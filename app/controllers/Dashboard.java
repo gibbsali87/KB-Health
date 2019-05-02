@@ -1,6 +1,6 @@
 package controllers;
 
-import models.Exerciselist;
+import models.Assessmentlist;
 import models.User;
 import play.Logger;
 import play.mvc.Controller;
@@ -15,26 +15,26 @@ public class Dashboard extends Controller
   {
     Logger.info("Rendering Dashboard");
     User user = getLoggedInUser();
-    List<Exerciselist> exerciselists = user.exerciselists;
-    render ("dashboard.html", exerciselists);
+    List<Assessmentlist> assessmentlists = user.assessmentlists;
+    render ("dashboard.html", assessmentlists);
   }
 
-  public static void deleteExerciselist (Long id)
+  public static void deleteAssessmentlist (Long id)
   {
     User user = getLoggedInUser();
-    Exerciselist exerciselist = Exerciselist.findById(id);
-    user.exerciselists.remove(exerciselist);
+    Assessmentlist assessmentlist = Assessmentlist.findById(id);
+    user.assessmentlists.remove(assessmentlist);
     user.save();
-    exerciselist.delete();
+    assessmentlist.delete();
     redirect ("/dashboard");
   }
 
-  public static void addExerciselist (String name)
+  public static void addAssessmentlist (int week)
   {
     User user = getLoggedInUser();
-    Exerciselist exerciselist = new Exerciselist (name, 0);
-    Logger.info ("Adding a new exerciselist called " + name);
-    user.exerciselists.add(exerciselist);
+    Assessmentlist assessmentlist = new Assessmentlist (week);
+    Logger.info ("Adding a new assessmentlist called " + week);
+    user.assessmentlists.add(assessmentlist);
     user.save();
     redirect ("/dashboard");
   }

@@ -3,21 +3,21 @@
 
 #{menu id:"dashboard"/}
 
-#{list items:exerciselists, as:'exerciselist'}
+#{list items:assessmentlists, as:'assessmentlist'}
   <section class="ui segment">
     <h2 class="ui header">
-      ${exerciselist.name} 
+      Week: ${assessmentlist.week} Assessments
     </h2>
-      <p> Total Duration: ${exerciselist.duration} </p>
-      <a href="/exerciselists/${exerciselist.id}" class="ui icon button">
+      <p> Week: ${assessmentlist.week} </p>
+      <a href="/assessmentlists/${assessmentlist.id}" class="ui icon button">
         <i class="icon folder open"></i>
       </a>
-      <a href="/dashboard/deleteexerciselist/${exerciselist.id}" class="ui icon button">
+      <a href="/dashboard/deleteassessmentlist/${assessmentlist.id}" class="ui icon button">
         <i class="icon trash"></i>
       </a>
   </section>
 #{/list}
-#{addexerciselist /}
+#{addassessmentlist /}
 
 
 

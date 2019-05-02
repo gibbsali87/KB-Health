@@ -14,18 +14,16 @@ GET    /logout                                  Members.logout
 GET /getmemberdetails                           Members.index
 
 GET     /dashboard                              Dashboard.index
-GET     /dashboard/deleteexerciselist/{id}      Dashboard.deleteexerciselist
-
-POST    /dashboard/addexerciselist              Dashboard.addExerciselist
-
+GET     /dashboard/deleteassessmentlist/{id}      Dashboard.deleteassessmentlist
+POST    /dashboard/addassessmentlist              Dashboard.addAssessmentlist
 POST    /dashboard/addcommentlist               CommentDetails.addCommentlist
 
 GET     /about                                  About.index
 GET     /trainer                                Trainer.index
-GET     /exerciselists/{id}                         ExerciseDetails.index
-GET     /exerciselists/{id}/deleteexercise/{exerciseid}     ExerciseDetails.deleteExercise
+GET     /assessmentlists/{id}                         AssessmentDetails.index
+GET     /assessmentlists/{id}/deleteassessment/{assessmentid}     AssessmentDetails.deleteAssessment
 
-POST    /exerciselists/{id}/addexercise                  ExerciseDetails.addExercise
+POST    /assessmentlists/{id}/addassessment                 AssessmentDetails.addAssessment
 
 GET /commentdetails    CommentDetails.index
 GET /commentlists/{id}    CommentDetails.allComments
@@ -33,14 +31,7 @@ POST /commentlists/{id}/addcomment             CommentDetails.addComment
 GET /commentlist/{id}/deletecomment/{commentid}         CommentDetails.deleteComment
 GET /commentdetails/deletecommentlist/{id}     CommentDetails.deleteCommentlist
 
-GET /assessment     AssessmentDetails.index
-POST /assessment/{id}/addassessment AssessmentDetails.addAssessment
-POST /assessment/addassessmentlist              AssessmentDetails.addAssessmentlist
-GET /assessmentdetails   AssessmentDetails.index
-GET /assessmentlists/{id}    AssessmentDetails.allAssessments
-POST /assessmentlists/{id}/addassessment            AssessmentDetails.addAssessment
-GET /assessmentlist/{id}/deleteassessment/{assessmentid}         AssessmentDetails.deleteAssessment
-GET /assessmentdetails/deleteassessmentlist/{id}     AssessmentDetails.deleteAssessmentlist
+
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

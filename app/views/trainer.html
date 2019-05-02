@@ -1,38 +1,51 @@
 #{extends 'main.html' /}
-#{set name:'Dashboard' /}
+#{set name:'Trainer' /}
 
 #{menu id:"trainer"/}
 
-  <section class="ui segment">
+
+<section class="ui segment">
   <h2 class="ui header">
-    All Known Exercises in the Database:
+   Assessments for all Users
   </h2>
   <table class="ui fixed table">
     <thead>
       <tr>
-        <th>ID </th>
-        <th>Song</th>
-        <th>Location</th>
-        <th>Duration</th>
+        <th>Date </th>
+        <th>Weight</th>
+        <th>Chest</th>
+        <th>Thigh</th>
+        <th>Upper Arm</th>
+        <th>Waist</th>
+        <th>Hips</th>
       </tr>
     </thead>
     <tbody>
-      #{list items:exercises, as:'exercise'}
-        <tr>
-          <td>
-            ${exercise.id}
-          </td>
-          <td>
-            ${exercise.name}
-          </td>
-          <td>
-            ${exercise.location}
-          </td>
-          <td>        
-            ${exercise.duration}
-          </td>        
-        </tr>
-      #{/list}
+    #{list items:assessments, as:'assessment'}
+    <tr>
+      <td>
+      ${assessment.date}
+      </td>
+      <td>
+      ${assessment.weight}
+      </td>
+      <td>
+      ${assessment.chest}
+      </td>
+      <td>
+      ${assessment.thigh}
+      </td>
+      <td>
+      ${assessment.upperArm}
+      </td>
+      <td>
+      ${assessment.waist}
+      </td>
+      <td>
+      ${assessment.hips}
+      </td>
+    </tr>
+    #{/list}
     </tbody>
   </table>
 </section>

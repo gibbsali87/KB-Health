@@ -1,37 +1,33 @@
 <table class="ui fixed table">
-    <thead>
+  <thead>
     <tr>
-        <th>Date</th>
-        <th>Height</th>
-        <th>Weight</th>
-        <th>Chest</th>
-        <th>Thigh</th>
-        <th>Upper Arm</th>
-        <th>Waist</th>
-        <th>Hips</th>
-        <th></th>
+      <th>Date</th>
+      <th>Weight</th>
+      <th>Chest</th>
+      <th>Thigh</th>
+      <th>Upper Arm</th>
+      <th>Waist</th>
+      <th>Hips</th>
+      <th></th>
     </tr>
-    </thead>
-    <tbody>
-    #{list items:_assessment, as:'assessment'}
-    <tr>
+  </thead>
+  <tbody>
+    #{list items:_assessmentlist.assessments, as:'assessment'}
+      <tr>
         <td>
         ${assessment.date}
         </td>
         <td>
-        ${assessment.height}
+          ${assessment.weight}
         </td>
         <td>
-        ${assessment.weight}
+          ${assessment.chest}
         </td>
-        <td>
-        ${assessment.chest}
-        </td>
-        <td>
-        ${assessment.thigh}
-        </td>
-        <td>
-        ${assessment.upperArm}
+        <td>        
+          ${assessment.thigh}
+        </td>  
+        <td>        
+         ${assessment.upperArm}
         </td>
         <td>
         ${assessment.waist}
@@ -40,9 +36,10 @@
         ${assessment.hips}
         </td>
         <td>
-            <a href="/assessments/${_assessment.id}/deleteassessment/${assessment.id}" class="ui tiny red button">Delete Assessment</a>
-        </td>
-    </tr>
+            <a href="/assessmentlists/${_assessmentlist.id}/deleteassessment/${assessment.id}" class="ui tiny red button">Delete Assessment</a>
+          </td>         
+      </tr>
     #{/list}
-    </tbody>
+  </tbody>
 </table>
+

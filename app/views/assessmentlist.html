@@ -1,12 +1,12 @@
 #{extends 'main.html' /}
 #{set name:'Assessmentlist' /}
 
-#{menu id:"assessment"/}
+#{menu id:"dashboard"/}
 
 <section class="ui segment">
-    <h2 class="ui header">
-        Assessments
-    </h2>
-#{listassessments assessmentlist:assessmentlist /}
-#{addassessment assessmentlist:assessmentlist /}
-</section>
+ <h2 class="ui header">
+ 	${assessmentlist.week}
+ </h2>
+  #{listassessments assessmentlist:assessmentlist /}
+  #{addassessment assessmentlist:assessmentlist /}
+</section> 
