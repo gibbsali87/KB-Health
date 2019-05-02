@@ -4,6 +4,21 @@
 #{menu id:"members"/}
 
 <section class="ui raised segment">
+<div class="ui two column grid basic middle aligned segment">
+    #{list items:user, as:'user'}
+            <div class="row" style="font-size: x-large">
+                <div class="col"><i class="icon profile"></i>${user.firstname} ${user.lastname}</div>
+                <div class="col">Gender:#{if user.gender == "Female"}<i class="icon woman"></i> #{/if} #{else}<i class="icon man"></i>#{/else}</div>
+                <div class="col">BMI: #{if (user.startWeight/((user.height/100)*(user.height/100)))>20} <i class="fa fa-heartbeat"; style="color: #dc0e00"></i> #{/if}</div>
+                <div class="col">Weight: #{if (user.startWeight)>90} <i class="fa fa-weight"; style="color: #dc0e00"></i> #{/if}</div>
+            </div>
+    #{/list}
+</div>
+</section>
+
+
+
+<section class="ui raised segment">
     <header class="ui header">
         Member Details
     </header>

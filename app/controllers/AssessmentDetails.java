@@ -6,8 +6,8 @@ import models.Assessmentlist;
 import models.Assessment;
 import play.Logger;
 import play.mvc.Controller;
-
 import java.util.Date;
+
 
 public class AssessmentDetails extends Controller
 {
@@ -17,7 +17,6 @@ public class AssessmentDetails extends Controller
       Logger.info ("Assessmentlist id = " + id);
       render("assessmentlist.html", assessmentlist);
     }
-
 
   public static void deleteAssessment (Long id, Long assessmentid)
   {
@@ -31,7 +30,7 @@ public class AssessmentDetails extends Controller
   }
 
 
-  public static void addAssessment(Long id,Date date,int weight,int chest,int thigh,int upperArm,int waist,int hips)
+  public static void addAssessment(Long id, Date date,int weight,int chest,int thigh,int upperArm,int waist,int hips)
   {
     Assessment assessment = new Assessment(date,weight,chest,thigh,upperArm,waist,hips);
     Assessmentlist assessmentlist = Assessmentlist.findById(id);

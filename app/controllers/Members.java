@@ -14,12 +14,6 @@ public class Members extends Controller
     Logger.info("Rendering Members");
     User user = getLoggedInUser();
     render ("memberdetails.html", user);
-    /*
-    Logger.info("Rendering Dashboard 2");
-    User user = getLoggedInUser();
-    List<User> userlists = user.userlists;
-    render ("memberdetails.html", userlists);
-    */
   }
   public static void signup()
   {

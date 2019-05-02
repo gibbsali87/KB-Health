@@ -3,6 +3,7 @@ package controllers;
 import models.Assessmentlist;
 import models.User;
 import play.Logger;
+import play.db.jpa.JPABase;
 import play.mvc.Controller;
 
 import java.util.List;
@@ -15,8 +16,8 @@ public class Dashboard extends Controller
   {
     Logger.info("Rendering Dashboard");
     User user = getLoggedInUser();
-    List<Assessmentlist> assessmentlists = user.assessmentlists;
-    render ("dashboard.html", assessmentlists);
+    List<Assessmentlist> assessmentlist = user.assessmentlists;
+    render ("dashboard.html", assessmentlist);
   }
 
   public static void deleteAssessmentlist (Long id)
@@ -29,7 +30,7 @@ public class Dashboard extends Controller
     redirect ("/dashboard");
   }
 
-  public static void addAssessmentlist (int week)
+  public static void addAssessmentlist (Long id,int week)
   {
     User user = getLoggedInUser();
     Assessmentlist assessmentlist = new Assessmentlist (week);

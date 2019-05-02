@@ -32,6 +32,7 @@ public class User extends Model {
   public List<Assessment> assessments = new ArrayList<Assessment>();
 
 
+
     public User(Long id, String firstname, String lastname, String gender, String email, String password, String address, float height, float startWeight, String chosenPackage, String comment) {
     this.firstname = firstname;
     this.lastname = lastname;
