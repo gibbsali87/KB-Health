@@ -1,16 +1,11 @@
 Assessment(a1):
   date: 2019-05-02 00:00:00.0
-  weight: 10
-  chest: 35
+  weight: 90.5
+  chest: 35.1
   thigh: 30
   upperArm: 20
   waist: 36
   hips: 38
-
-Assessmentlist(al1):
-  week: 1
-  assessments:
-    - a1
 
 User(u1):
   firstname: Arshad
@@ -22,11 +17,14 @@ User(u1):
   chosenPackage: Premium
   email: Arshad@KBHealth.ie
   password: 123
-  assessmentlists:
-    - al1
+  assessments:
+  - a1
 
 User(u2):
   firstname: Kate
   lastname: Kida
   email: kate@KBHealth.ie
   password: 123
+  gender: Female
+  height: 166
+  startWeight: 70

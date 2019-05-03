@@ -18,6 +18,7 @@
         <th>Upper Arm</th>
         <th>Waist</th>
         <th>Hips</th>
+        <th>Comment</th>
       </tr>
     </thead>
     <tbody>
@@ -44,9 +45,16 @@
       <td>
       ${assessment.hips}
       </td>
+      <td>
+      ${assessment.comment}
+      </td>
+      <td>
+        <a href="/trainer/deleteassessment/${assessment.id}" class="ui tiny red button">Delete Comment</a>
+      </td>
     </tr>
     #{/list}
     </tbody>
   </table>
 </section>
 #{addassessment /}
+

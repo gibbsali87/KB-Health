@@ -5,7 +5,6 @@ import models.User;
 import play.Logger;
 import play.mvc.Controller;
 
-import java.util.List;
 
 public class Members extends Controller
 {

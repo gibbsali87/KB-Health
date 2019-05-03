@@ -1,41 +1,31 @@
 package controllers;
 
-import models.Assessmentlist;
+import models.Assessment;
 import models.User;
 import play.Logger;
-import play.db.jpa.JPABase;
 import play.mvc.Controller;
 
+import java.util.Date;
 import java.util.List;
 
 import static controllers.Members.*;
 
 public class Dashboard extends Controller
 {
-  public static void index() 
-  {
+  public static void index() {
     Logger.info("Rendering Dashboard");
     User user = getLoggedInUser();
-    List<Assessmentlist> assessmentlist = user.assessmentlists;
-    render ("dashboard.html", assessmentlist);
+    List<Assessment> assessment = user.assessments;
+    Logger.info("Rendering Dashboard 2");
+    render("dashboard.html", assessment);
   }
 
-  public static void deleteAssessmentlist (Long id)
+  public static void addAssessment (Long id, Date date, float weight, float chest, float thigh, float upperArm, float waist, float hips, String comment)
   {
     User user = getLoggedInUser();
-    Assessmentlist assessmentlist = Assessmentlist.findById(id);
-    user.assessmentlists.remove(assessmentlist);
-    user.save();
-    assessmentlist.delete();
-    redirect ("/dashboard");
-  }
-
-  public static void addAssessmentlist (Long id,int week)
-  {
-    User user = getLoggedInUser();
-    Assessmentlist assessmentlist = new Assessmentlist (week);
-    Logger.info ("Adding a new assessmentlist called " + week);
-    user.assessmentlists.add(assessmentlist);
+    Assessment assessment = new Assessment (date,weight,chest,thigh,upperArm,waist,hips,comment);
+    Logger.info ("Adding a new assessmentlist called " + date);
+    user.assessments.add(assessment);
     user.save();
     redirect ("/dashboard");
   }

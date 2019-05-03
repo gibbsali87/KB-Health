@@ -23,9 +23,6 @@ public class User extends Model {
   public String comment;
 
   @OneToMany(cascade = CascadeType.ALL)
-  public List<Assessmentlist> assessmentlists = new ArrayList<Assessmentlist>();
-
-  @OneToMany(cascade = CascadeType.ALL)
   public List<User> userlists = new ArrayList<User>();
 
   @OneToMany(cascade = CascadeType.ALL)

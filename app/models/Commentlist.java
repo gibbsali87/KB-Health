@@ -15,6 +15,7 @@ public class Commentlist extends Model
 {
     public String comment;
     @OneToMany(cascade = CascadeType.ALL)
+
     public List<Comment> comments = new ArrayList<Comment>();
     Date date;
 

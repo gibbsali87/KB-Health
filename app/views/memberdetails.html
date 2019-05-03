@@ -6,11 +6,24 @@
 <section class="ui raised segment">
 <div class="ui two column grid basic middle aligned segment">
     #{list items:user, as:'user'}
-            <div class="row" style="font-size: x-large">
-                <div class="col"><i class="icon profile"></i>${user.firstname} ${user.lastname}</div>
-                <div class="col">Gender:#{if user.gender == "Female"}<i class="icon woman"></i> #{/if} #{else}<i class="icon man"></i>#{/else}</div>
-                <div class="col">BMI: #{if (user.startWeight/((user.height/100)*(user.height/100)))>20} <i class="fa fa-heartbeat"; style="color: #dc0e00"></i> #{/if}</div>
-                <div class="col">Weight: #{if (user.startWeight)>90} <i class="fa fa-weight"; style="color: #dc0e00"></i> #{/if}</div>
+            <div class="row" style="font-size: x-large" align="center">
+                <div class="col"><i class="icon profile"></i>${user.firstname} ${user.lastname}
+                    <div class="col" style="font-size: small" align="center">Full Name</div>
+                </div>
+                <div class="col">#{if user.gender == "Female"}<i class="fa fa-female"; style="color: #dc00bf"></i> #{/if}
+                    #{else}<i class="fa fa-male"; style="color: #0008dc"></i>#{/else}
+                    <div style="font-size: small" >Gender</div>
+                </div>
+                <div class="col">${user.startWeight/((user.height/100)*(user.height/100))}
+                    #{if (user.startWeight/((user.height/100)*(user.height/100)))>30} <i class="fa fa-heartbeat"; style="color: #dc0e00"></i> #{/if}
+                    #{else}<i class="fa fa-heartbeat"; style="color: #00dc04"></i>#{/else}
+                    <div class="col" style="font-size: small">BMI</div>
+                </div>
+                <div class="col">${user.startWeight}
+                    #{if (user.startWeight)>90} <i class="fa fa-weight"; style="color: #dc0e00"></i> #{/if}
+                    #{else}<i class="fa fa-weight"; style="color: #00dc04"></i>#{/else}
+                    <div class="col" style="font-size: small" >Weight</div>
+                </div>
             </div>
     #{/list}
 </div>

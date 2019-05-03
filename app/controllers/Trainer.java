@@ -1,13 +1,14 @@
 package controllers;
 
+
 import java.util.List;
 
 import models.Assessment;
-import models.User;
+
 import play.Logger;
 import play.mvc.Controller;
 
-import static controllers.Members.getLoggedInUser;
+
 
 public class Trainer extends Controller
 {
@@ -17,4 +18,5 @@ public class Trainer extends Controller
     List<Assessment> assessments = Assessment.findAll();
     render("trainer.html", assessments);
   }
+
 }

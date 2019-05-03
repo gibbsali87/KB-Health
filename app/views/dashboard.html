@@ -3,21 +3,48 @@
 
 #{menu id:"dashboard"/}
 
-#{list items:assessmentlist, as:'assessmentlist'}
-  <section class="ui segment">
-    <h2 class="ui header">
-      Week: ${assessmentlist.week} Assessments
-    </h2>
-      <p> Week: ${assessmentlist.week} </p>
-      <a href="/assessmentlists/${assessmentlist.id}" class="ui icon button">
-        <i class="icon folder open"></i>
-      </a>
-      <a href="/dashboard/deleteassessmentlist/${assessmentlist.id}" class="ui icon button">
-        <i class="icon trash"></i>
-      </a>
-  </section>
-#{/list}
-#{addassessmentlist /}
+<table class="ui fixed table">
+  <thead>
+  <tr>
+    <th>Date </th>
+    <th>Weight</th>
+    <th>Chest</th>
+    <th>Thigh</th>
+    <th>Upper Arm</th>
+    <th>Waist</th>
+    <th>Hips</th>
+  </tr>
+  </thead>
+  <tbody>
+  #{list items:assessment, as:'assessment'}
+  <tr>
+    <td>
+    ${assessment.date}
+    </td>
+    <td>
+    ${assessment.weight}
+    </td>
+    <td>
+    ${assessment.chest}
+    </td>
+    <td>
+    ${assessment.thigh}
+    </td>
+    <td>
+    ${assessment.upperArm}
+    </td>
+    <td>
+    ${assessment.waist}
+    </td>
+    <td>
+    ${assessment.hips}
+    </td>
+  </tr>
+  #{/list}
+  </tbody>
+</table>
+
+#{addassessment /}
 
 
 
