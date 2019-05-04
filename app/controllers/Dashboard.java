@@ -19,7 +19,7 @@ public class Dashboard extends Controller
     Logger.info("Rendering Dashboard 2");
     render("dashboard.html", assessment);
   }
-
+/*
   public static void addAssessment (Long id, Date date, float weight, float chest, float thigh, float upperArm, float waist, float hips, String comment)
   {
     User user = getLoggedInUser();
@@ -29,6 +29,7 @@ public class Dashboard extends Controller
     user.save();
     redirect ("/dashboard");
   }
+ */
 
 }
 

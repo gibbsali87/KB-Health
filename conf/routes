@@ -20,7 +20,7 @@ POST    /dashboard/addcommentlist               CommentDetails.addCommentlist
 
 GET     /about                                  About.index
 GET     /trainer                                Trainer.index
-GET     /trainer/deleteassessment/{assessmentid}     AssessmentDetails.deleteAssessment
+GET     /trainer/deleteassessments/{id}     AssessmentDetails.deleteAssessment
 GET     /trainer/                         AssessmentDetails.index
 POST    /trainer/addassessment                 AssessmentDetails.addAssessment
 POST    /trainer/addassessmentcomment                 Trainer.addComment

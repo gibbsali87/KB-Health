@@ -2,13 +2,11 @@ package controllers;
 
 
 import models.Assessment;
-import models.Comment;
-import models.Commentlist;
 import models.User;
 import play.Logger;
 import play.mvc.Controller;
 import java.util.Date;
-import java.util.List;
+
 
 import static controllers.Members.getLoggedInUser;
 
@@ -23,14 +21,6 @@ public class AssessmentDetails extends Controller
         render("trainer.html", assessment);
     }
 
-    public static void deleteAssessment (Long assessmentid)
-    {
-        User user = getLoggedInUser();
-        Assessment assessment = Assessment.findById(assessmentid);
-        Logger.info ("Removing " + assessmentid);
-        user.assessments.remove(assessment);
-        render("trainer.html", assessment);
-    }
 
     public static void addAssessment(Long id, Date date,float weight,float chest,float thigh,float upperArm,float waist,float hips, String comment)
     {
@@ -40,5 +30,17 @@ public class AssessmentDetails extends Controller
         assessment.save();
         redirect ("/dashboard");
     }
+
+    public static void deleteAssessment (Long id)
+    {
+        Logger.info("Deleting an Assessment");
+        User member = Members.getLoggedInUser();
+        Assessment assessment = Assessment.findById(id);
+        member.assessments.remove(assessment);
+        member.save();
+        assessment.delete();
+        redirect ("/dashboard");
+    }
+
 
 }
