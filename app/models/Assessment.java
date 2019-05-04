@@ -14,7 +14,6 @@ import java.util.List;
 @Entity
 public class Assessment extends Model
 {
-
   public Date date;
   public float weight;
   public float chest;
@@ -23,6 +22,9 @@ public class Assessment extends Model
   public float waist;
   public float hips;
   public String comment;
+
+  @OneToMany(cascade = CascadeType.ALL)
+  public List<Comment> comments = new ArrayList<Comment>();
 
 
     public Assessment(Date date,float weight,float chest,float thigh,float upperArm,float waist,float hips, String comment)

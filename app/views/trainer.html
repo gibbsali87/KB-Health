@@ -19,6 +19,7 @@
         <th>Waist</th>
         <th>Hips</th>
         <th>Comment</th>
+        <th>Action</th>
       </tr>
     </thead>
     <tbody>
@@ -49,12 +50,19 @@
       ${assessment.comment}
       </td>
       <td>
-        <a href="/trainer/deleteassessments/${assessment.id}" class="ui icon button">
-          <i class="icon trash"></i>
+        <a href="/trainer/deleteassessments/${assessment.id}" class="ui icon button" style="color: #dc0e00">
+          <i class="fa fa-trash"></i>
         </a>
       </td>
     </tr>
+    <tr>
+      <td colspan="9">
+        #{listcomments assessment:assessment /}
+        #{addcomment assessment:assessment /}
+      </td>
+    </tr>
     #{/list}
+
     </tbody>
   </table>
 </section>
