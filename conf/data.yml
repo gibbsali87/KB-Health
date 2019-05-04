@@ -1,5 +1,5 @@
 Assessment(a1):
-  date: 2019-05-01 00:00:00.0
+  date: 2019-05-01 10:00:00.0
   weight: 90.5
   chest: 35.1
   thigh: 30
@@ -8,7 +8,7 @@ Assessment(a1):
   hips: 38
 
 Assessment(a2):
-  date: 2019-05-02 00:00:00.0
+  date: 2019-05-02 10:00:00.0
   weight: 89
   chest: 35
   thigh: 28
@@ -17,7 +17,7 @@ Assessment(a2):
   hips: 36
 
 Assessment(a3):
-  date: 2019-05-03 00:00:00.0
+  date: 2019-05-03 10:00:00.0
   weight: 88
   chest: 34
   thigh: 25

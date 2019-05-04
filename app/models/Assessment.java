@@ -4,8 +4,11 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 
+import org.joda.time.DateTime;
 import play.db.jpa.Model;
 
+
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -27,7 +30,7 @@ public class Assessment extends Model
   public List<Comment> comments = new ArrayList<Comment>();
 
 
-    public Assessment(Date date,float weight,float chest,float thigh,float upperArm,float waist,float hips, String comment)
+  public Assessment(Date date, float weight, float chest, float thigh, float upperArm, float waist, float hips, String comment)
   {
     this.date = date;
     this.weight = weight;
@@ -38,4 +41,5 @@ public class Assessment extends Model
     this.hips = hips;
     this.comment = comment;
   }
+
 }

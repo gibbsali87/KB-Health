@@ -7,7 +7,6 @@ import play.Logger;
 import play.mvc.Controller;
 import java.util.Date;
 
-
 import static controllers.Members.getLoggedInUser;
 
 
@@ -22,7 +21,7 @@ public class AssessmentDetails extends Controller
     }
 
 
-    public static void addAssessment(Long id, Date date,float weight,float chest,float thigh,float upperArm,float waist,float hips, String comment)
+    public static void addAssessment(Long id, Date date, float weight, float chest, float thigh, float upperArm, float waist, float hips, String comment)
     {
         User user = getLoggedInUser();
         Assessment assessment = new Assessment(date,weight,chest,thigh,upperArm,waist,hips,comment);
