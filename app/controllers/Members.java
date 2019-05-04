@@ -5,14 +5,23 @@ import models.User;
 import play.Logger;
 import play.mvc.Controller;
 
+import java.util.List;
+
 
 public class Members extends Controller
 {
   public static void index()
   {
-    Logger.info("Rendering Members");
+    Logger.info("Rendering Members/User");
     User user = getLoggedInUser();
     render ("memberdetails.html", user);
+  }
+
+  public static void getallUsers()
+  {
+    Logger.info("Rendering All Members/User");
+    List<User> user = User.findAll();
+    render ("admin.html", user);
   }
   public static void signup()
   {
@@ -42,7 +51,7 @@ public class Members extends Controller
     if ((user != null) && (user.checkPassword(password) == true)) {
       Logger.info("Authentication successful");
       session.put("logged_in_Userid", user.id);
-      redirect ("/dashboard");
+      redirect ("/getmemberdetails");
     } else {
       Logger.info("Authentication failed");
       redirect("/login");
@@ -65,5 +74,13 @@ public class Members extends Controller
       login();
     }
     return member;
+  }
+
+  public static void deleteUser (Long id)
+  {
+    Logger.info("Deleting an Assessment");
+    User user = User.findById(id);
+    user.delete();
+    redirect ("/dashboard");
   }
 }

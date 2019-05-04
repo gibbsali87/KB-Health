@@ -5,6 +5,7 @@ import java.util.List;
 
 import models.Assessment;
 
+import models.User;
 import play.Logger;
 import play.mvc.Controller;
 

@@ -1,8 +1,7 @@
 #{extends 'main.html' /}
-#{set name:'Dashboard' /}
 
-#{menu id:"dashboard"/}
 
+<section class="ui raised segment">
 <table class="ui fixed table">
   <thead>
   <tr>
@@ -57,9 +56,12 @@
   </tr>
   #{/list}
   </tbody>
-</table>
+    </table>
 
-#{addassessment /}
+  <div>
+      #{addassessment /}
+    </div>
+</section>
 
 
 

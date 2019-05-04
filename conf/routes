@@ -12,6 +12,10 @@ POST   /authenticate                            Members.authenticate
 GET    /logout                                  Members.logout
 
 GET /getmemberdetails                           Members.index
+GET /admin                          Members.getallUsers
+GET /dashboard/members              Members.index
+GET /members/deleteUser/{id}        Members.deleteUser
+
 
 GET     /dashboard                              Dashboard.index
 GET     /dashboard/deleteassessmentlist/{id}      Dashboard.deleteassessmentlist
@@ -26,7 +30,7 @@ POST    /trainer/addassessment                 AssessmentDetails.addAssessment
 POST    /trainer/addassessmentcomment                 Trainer.addComment
 
 POST    /assessments/{id}/addcomment    CommentDetails.addComment
-
+GET /listassessments    Dashboard.listallAssessments
 
 
 # Ignore favicon requests

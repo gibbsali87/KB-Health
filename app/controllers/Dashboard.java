@@ -14,10 +14,15 @@ public class Dashboard extends Controller
     Logger.info("Rendering Dashboard");
     User user = getLoggedInUser();
     List<Assessment> assessment = user.assessments;
-    Logger.info("Rendering Dashboard 2");
     render("dashboard.html", assessment);
   }
 
+  public static void listallAssessments() {
+    Logger.info("Rendering Dashboard");
+    User user = getLoggedInUser();
+    List<Assessment> assessment = user.assessments;
+    render("listassessments.html", assessment);
+  }
 }
 
 
