@@ -3,6 +3,15 @@
 
 #{menu id:"trainer"/}
 
+<section class="ui segment">
+  <h3> All Members</h3>
+  <iframe class="ui raised segment" src="/admin"  height=500px width="100%" name="allUsers"></iframe>
+    <a href="/admin#activate"
+       target="allUsers"
+       onclick="frames['allUsers'].document.getElementById('activate')
+                .scrollIntoView();return false"></a>
+</section>
+
 
 <section class="ui segment">
   <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#assessments">Show Assessments</button>
@@ -79,13 +88,7 @@
 
 
 
-<section class="ui segment">
-  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#allUsers">All Members</button>
 
-    <div id="allUsers" class="collapse"><br>
-      <iframe class="ui raised segment" src="/admin" height=500px width="100%" scrolling="No"></iframe>
-    </div>
-</section>
 
 
 

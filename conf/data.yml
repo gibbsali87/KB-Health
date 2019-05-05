@@ -25,12 +25,39 @@ Assessment(a3):
   waist: 34
   hips: 35
 
+Assessment(a4):
+  date: 2019-05-01 10:00:00.0
+  weight: 90.5
+  chest: 35.1
+  thigh: 30
+  upperArm: 20
+  waist: 36
+  hips: 38
+
+Assessment(a5):
+  date: 2019-04-04 12:30:00.0
+  weight: 80
+  chest: 25
+  thigh: 15
+  upperArm: 10
+  waist: 25
+  hips: 20
+
+Assessment(a6):
+  date: 2019-05-05 12:30:00.0
+  weight: 70
+  chest: 25
+  thigh: 15
+  upperArm: 10
+  waist: 25
+  hips: 20
+
 User(u1):
   firstname: Arshad
   lastname: Ali
   gender: Male
   height: 166
-  startWeight: 104
+  startWeight: 95
   address: Apt 5 Sallins
   chosenPackage: Premium
   email: Arshad@KBHealth.ie
@@ -39,6 +66,7 @@ User(u1):
   - a1
   - a2
   - a3
+  - a6
 
 User(u2):
   firstname: Kate
@@ -48,3 +76,6 @@ User(u2):
   gender: Female
   height: 166
   startWeight: 70
+  assessments:
+    - a4
+    - a5

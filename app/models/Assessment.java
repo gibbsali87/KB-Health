@@ -3,8 +3,6 @@ package models;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
-
-import org.joda.time.DateTime;
 import play.db.jpa.Model;
 
 

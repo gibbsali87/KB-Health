@@ -3,11 +3,10 @@ package controllers;
 
 import models.Assessment;
 import models.Comment;
-import models.User;
 import play.Logger;
 import play.mvc.Controller;
 import java.util.Date;
-import static controllers.Members.getLoggedInUser;
+
 
 
 public class CommentDetails extends Controller

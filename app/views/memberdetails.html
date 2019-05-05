@@ -14,7 +14,7 @@
                     #{else}<i class="fa fa-male"; style="color: #0008dc"></i>#{/else}
                     <div style="font-size: small" >Gender</div>
                 </div>
-                <div class="col">${user.startWeight/((user.height/100)*(user.height/100))}
+                <div class="col"> ${user.startWeight/((user.height/100)*(user.height/100))}
                     #{if (user.startWeight/((user.height/100)*(user.height/100)))>30} <i class="fa fa-heartbeat"; style="color: #dc0e00"></i> #{/if}
                     #{else}<i class="fa fa-heartbeat"; style="color: #00dc04"></i>#{/else}
                     <div class="col" style="font-size: small">BMI</div>
@@ -32,7 +32,7 @@
 <section class="ui raised segment">
     <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#assessments">Show Assessments</button>
     <div id="assessments" class="collapse">
-        <iframe class="ui raised segment" src="/dashboard" height=500px width="100%" ></iframe>
+        <iframe class="ui raised segment" src="/dashboard" style="border:none;" height=500px width="100%" ></iframe>
     </div>
 </section>
 
@@ -52,25 +52,21 @@
             <div class="ui item">Address: ${user.address} </div>
             <div class="ui item">Height: ${user.height} </div>
             <div class="ui item">Weight: ${user.startWeight} </div>
-            <div class="ui item">BMI: ${user.startWeight/((user.height/100)*(user.height/100))} </div>
             <div class="ui item">Package: ${user.chosenPackage} </div>
-            <div class="ui item">Comment: ${user.comment} </div>
-            <div class="field">
-                <label>First Name</label>
-                <input placeholder= ${user.firstname}  name="firstname">
-            </div>
-
         #{/list}
         </div>
     </div>
 </section>
 
-
+<section class="ui raised segment">
+    <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#updateprofile">Update Member Details</button>
+    <div id="updateprofile" class="collapse">
+        <br>
 <div class="ui two column grid basic middle aligned segment">
     <div class="column">
     #{list items:user, as:'user'}
         <form class="ui stacked segment form"  action="/members/updateUser/${user.id}" method="POST">
-            <h3 class="ui header">Register</h3>
+            <h3 class="ui header">Update User details</h3>
 
             <div class="two fields">
                 <div class="field">
@@ -118,8 +114,12 @@
                 <label>Comment</label>
                 <input placeholder="${user.comment}" value="${user.comment}" type="text=" name="comment">
             </div>
-            <button class="ui blue submit button">Submit</button>
+            <button class="ui blue submit button">Update</button>
         </form>
     </div>
         #{/list}
 </div>
+</div>
+</section>
+
+
