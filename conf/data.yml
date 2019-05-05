@@ -1,6 +1,7 @@
 Assessment(a1):
   date: 2019-05-01 10:00:00.0
   weight: 90.5
+  height: 166
   chest: 35.1
   thigh: 30
   upperArm: 20
@@ -10,6 +11,7 @@ Assessment(a1):
 Assessment(a2):
   date: 2019-05-02 10:00:00.0
   weight: 89
+  height: 166
   chest: 35
   thigh: 28
   upperArm: 18
@@ -19,6 +21,7 @@ Assessment(a2):
 Assessment(a3):
   date: 2019-05-03 10:00:00.0
   weight: 88
+  height: 166
   chest: 34
   thigh: 25
   upperArm: 15
@@ -28,6 +31,7 @@ Assessment(a3):
 Assessment(a4):
   date: 2019-05-01 10:00:00.0
   weight: 90.5
+  height: 166
   chest: 35.1
   thigh: 30
   upperArm: 20
@@ -37,6 +41,7 @@ Assessment(a4):
 Assessment(a5):
   date: 2019-04-04 12:30:00.0
   weight: 80
+  height: 166
   chest: 25
   thigh: 15
   upperArm: 10
@@ -46,6 +51,17 @@ Assessment(a5):
 Assessment(a6):
   date: 2019-05-05 12:30:00.0
   weight: 70
+  height: 166
+  chest: 25
+  thigh: 15
+  upperArm: 10
+  waist: 25
+  hips: 20
+
+Assessment(a7):
+  date: 2019-05-06 12:30:00.0
+  weight: 90
+  height: 166
   chest: 25
   thigh: 15
   upperArm: 10
@@ -63,10 +79,10 @@ User(u1):
   email: Arshad@KBHealth.ie
   password: 123
   assessments:
-  - a1
-  - a2
-  - a3
-  - a6
+    - a1
+    - a2
+    - a3
+    - a6
 
 User(u2):
   firstname: Kate
@@ -79,3 +95,14 @@ User(u2):
   assessments:
     - a4
     - a5
+
+User(u3):
+  firstname: Ali
+  lastname: A
+  email: Ali@KBHealth.ie
+  password: 123
+  gender: Male
+  height: 170
+  startWeight: 75
+  assessments:
+    - a7
