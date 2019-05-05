@@ -55,8 +55,71 @@
             <div class="ui item">BMI: ${user.startWeight/((user.height/100)*(user.height/100))} </div>
             <div class="ui item">Package: ${user.chosenPackage} </div>
             <div class="ui item">Comment: ${user.comment} </div>
+            <div class="field">
+                <label>First Name</label>
+                <input placeholder= ${user.firstname}  name="firstname">
+            </div>
 
         #{/list}
         </div>
     </div>
 </section>
+
+
+<div class="ui two column grid basic middle aligned segment">
+    <div class="column">
+    #{list items:user, as:'user'}
+        <form class="ui stacked segment form"  action="/members/updateUser/${user.id}" method="POST">
+            <h3 class="ui header">Register</h3>
+
+            <div class="two fields">
+                <div class="field">
+                    <label>First Name</label>
+                    <input placeholder="${user.firstname}" value="${user.firstname}" type="text" name="firstname">
+                </div>
+                <div class="field">
+                    <label>Last Name</label>
+                    <input placeholder="${user.lastname}" value="${user.lastname}" type="text" name="lastname">
+                </div>
+            </div>
+            <div class="two fields">
+                <div class="field">
+                    <label>Height</label>
+                    <input placeholder="${user.height}" value="${user.height}" type="text" name="height">
+                </div>
+                <div class="field">
+                    <label>Weight</label>
+                    <input placeholder="${user.startWeight}" value="${user.startWeight}" type="text" name="weight">
+                </div>
+            </div>
+            <div class="two fields">
+                <div class="field">
+                    <label>Gender</label>
+                    <input placeholder="${user.gender}" value="${user.gender}" type="text" name="gender">
+                </div>
+                <div class="field">
+                    <label>Chosen Package</label>
+                    <input placeholder="${user.chosenPackage}" value="${user.chosenPackage}" type="text" name="chosenPackage">
+                </div>
+            </div>
+            <div class="field">
+                <label>Address</label>
+                <input placeholder="${user.address}" value="${user.address}" type="text" name="address">
+            </div>
+            <div class="field">
+                <label>Email</label>
+                <input placeholder="${user.email}" value="${user.email}" type="text" name="email">
+            </div>
+            <div class="field">
+                <label>Password</label>
+                <input placeholder="${user.password}" value="${user.password}" type="password" name="password">
+            </div>
+            <div class="field">
+                <label>Comment</label>
+                <input placeholder="${user.comment}" value="${user.comment}" type="text=" name="comment">
+            </div>
+            <button class="ui blue submit button">Submit</button>
+        </form>
+    </div>
+        #{/list}
+</div>

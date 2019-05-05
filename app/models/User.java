@@ -29,9 +29,16 @@ public class User extends Model {
   public List<Assessment> assessments = new ArrayList<Assessment>();
 
 
-
-    public User(Long id, String firstname, String lastname, String gender, String email, String password, String address, float height, float startWeight, String chosenPackage, String comment) {
+  public void setFirstname(java.lang.String firstname) {
     this.firstname = firstname;
+  }
+
+  public String getFirstname() {
+    return firstname;
+  }
+
+  public User(Long id, String firstname, String lastname, String gender, String email, String password, String address, float height, float startWeight, String chosenPackage, String comment) {
+    setFirstname(firstname);
     this.lastname = lastname;
     this.gender = gender;
     this.email = email;

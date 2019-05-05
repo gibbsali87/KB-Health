@@ -15,7 +15,7 @@ GET /getmemberdetails                           Members.index
 GET /admin                          Members.getallUsers
 GET /dashboard/members              Members.index
 GET /members/deleteUser/{id}        Members.deleteUser
-
+POST /members/updateUser/{id}        Members.updateUser
 
 GET     /dashboard                              Dashboard.index
 GET     /dashboard/deleteassessmentlist/{id}      Dashboard.deleteassessmentlist

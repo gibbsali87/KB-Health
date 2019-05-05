@@ -5,6 +5,8 @@ import models.Assessment;
 import models.User;
 import play.Logger;
 import play.mvc.Controller;
+
+import java.util.Collections;
 import java.util.Date;
 
 import static controllers.Members.getLoggedInUser;
@@ -21,12 +23,13 @@ public class AssessmentDetails extends Controller
     }
 
 
-    public static void addAssessment(Long id, Date date, float weight, float chest, float thigh, float upperArm, float waist, float hips, String comment)
+    public static void addAssessment(Long id, Date date, float weight, float chest, float thigh, float upperArm, float waist, float hips, String comment, float height)
     {
         User user = getLoggedInUser();
-        Assessment assessment = new Assessment(date,weight,chest,thigh,upperArm,waist,hips,comment);
+        Assessment assessment = new Assessment(date,weight,chest,thigh,upperArm,waist,hips,comment,height);
         user.assessments.add(assessment);
         assessment.save();
+        Collections.reverse(user.assessments);
         redirect ("/dashboard");
     }
 

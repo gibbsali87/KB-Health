@@ -14,6 +14,7 @@
     <th>Hips</th>
     <th>Comment</th>
     <th>Action</th>
+
   </tr>
   </thead>
   <tbody>
@@ -64,4 +65,33 @@
 </section>
 
 
+<section class="ui raised segment">
+  <table class="ui fixed table">
+    <thead>
+    <tr>
+      <th>Height</th>
+      <th>Weight</th>
+      <th>BMI</th>
+    </tr>
+    </thead>
+    <tbody>
+    #{list items:assessment}
+    <tr>
+      <td>
+      ${assessment.height}
+      </td>
+      <td>
+      ${assessment.weight}
+      </td>
+      <td>
+      ${assessment.weight/((assessment.height/100)*(assessment.height/100))}
+        #{if (assessment.weight/((assessment.height/100)*(assessment.height/100)))>30}
+          <i class="fa fa-heartbeat"; style="color: #dc0e00"></i> #{/if}
+        #{else}<i class="fa fa-heartbeat"; style="color: #00dc04"></i>#{/else}
+      <td>
+    </tr>
+    #{/list}
+    </tbody>
+  </table>
+</section>
 
